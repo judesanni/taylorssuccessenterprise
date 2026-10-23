@@ -9,3 +9,50 @@
 
 /* Legal pages and footer policy links */
 .legal-links{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}.legal-links a{color:#d8d3ce;text-decoration:underline;text-decoration-color:rgba(216,211,206,.45);text-underline-offset:3px}.legal-links a:hover{color:var(--lime)}.legal-content{max-width:900px}.legal-section{padding:0 0 28px;margin:0 0 28px;border-bottom:1px solid var(--line)}.legal-section:last-of-type{border-bottom:0}.legal-section .h2{font-size:clamp(1.45rem,2.6vw,2rem);margin-bottom:14px}.legal-section p{max-width:82ch;color:#514d48;line-height:1.8;margin:0 0 14px}.legal-section a{color:var(--red);text-decoration:underline;text-underline-offset:3px}.legal-content .notice{margin-top:18px;line-height:1.65}@media(max-width:640px){.legal-links{margin-top:12px;gap:10px 14px}.legal-links a{font-size:.78rem}}
+
+/* FIX: Keep consent checkbox text inside the form */
+.field.full,
+.form-grid,
+.contact-form {
+  min-width: 0;
+}
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.check-row input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  width: 17px !important;
+  min-width: 17px;
+  max-width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  padding: 0 !important;
+  margin: 4px 0 0 !important;
+  box-shadow: none;
+}
+
+.check-row a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* FIX: Make the active navigation underline persistent */
+.main-nav a.active::after,
+.main-nav a[aria-current="page"]::after {
+  transform: scaleX(1) !important;
+}
+
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+  color: var(--red);
+}
