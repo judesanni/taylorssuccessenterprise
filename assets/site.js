@@ -1,4 +1,3 @@
-
 const TSE = {
   eventbrite: "https://www.eventbrite.com/o/taylors-enterprise-28628068455",
   contactEmail: "tsenterprisesatlanta@gmail.com",
@@ -15,20 +14,48 @@ const TSE = {
 const $ = (s,root=document)=>root.querySelector(s);
 const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
 
-function initNavigation(){
-  const toggle=$(".menu-toggle"), mobile=$(".mobile-nav");
-  if(toggle && mobile){
-    toggle.addEventListener("click",()=>{
-      const opened=mobile.classList.toggle("open");
-      toggle.setAttribute("aria-expanded",String(opened));
-      toggle.innerHTML=opened?'<span aria-hidden="true">×</span>':'<span aria-hidden="true">☰</span>';
+function initNavigation() {
+  const toggle = document.querySelector(".menu-toggle");
+  const mobile = document.querySelector(".mobile-nav");
+
+  if (toggle && mobile) {
+    toggle.addEventListener("click", () => {
+      const opened = mobile.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(opened));
+      toggle.innerHTML = opened
+        ? '<span aria-hidden="true">×</span>'
+        : '<span aria-hidden="true">☰</span>';
     });
-    $$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>{mobile.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.innerHTML='<span aria-hidden="true">☰</span>';}));
+
+    mobile.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobile.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = '<span aria-hidden="true">☰</span>';
+      });
+    });
   }
-  const page=(location.pathname.split("/").pop()||"index.html").toLowerCase();
-  $$("[data-nav]").forEach(a=>{
-    const target=(a.getAttribute("href")||"").split("?")[0].split("#")[0].toLowerCase();
-    if(target===page || (page==="" && target==="index.html")) a.setAttribute("aria-current","page");
+
+  const currentPage =
+    (window.location.pathname.split("/").pop() || "index.html")
+      .toLowerCase();
+
+  document.querySelectorAll("[data-nav]").forEach((link) => {
+    const target = (link.getAttribute("href") || "")
+      .split("?")[0]
+      .split("#")[0]
+      .toLowerCase();
+
+    const isCurrent = target === currentPage ||
+      (!target && currentPage === "index.html");
+
+    link.classList.toggle("active", isCurrent);
+
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 }
 function initReveal(){
