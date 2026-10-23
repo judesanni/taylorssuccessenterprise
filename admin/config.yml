@@ -1,0 +1,106 @@
+backend:
+  name: turbo-github
+  turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
+  branch: main
+
+site_url: https://YOUR-NETLIFY-SITE.netlify.app
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site_images"
+    label: "Website Images"
+    files:
+      - name: "image_library"
+        label: "Image Library"
+        file: "data/site-images.json"
+        format: "json"
+        fields:
+          - label: "People connecting at a professional event"
+            name: about_people_connecting_at_a_professiona
+            widget: image
+          - label: "Branding portfolio"
+            name: index_branding_portfolio
+            widget: image
+          - label: "Community in Motion"
+            name: index_community_in_motion
+            widget: image
+          - label: "Coworking space concept"
+            name: index_coworking_space_concept
+            widget: image
+          - label: "Event venue concept"
+            name: index_event_venue_concept
+            widget: image
+          - label: "Index CTA image"
+            name: index_index_cta_image
+            widget: image
+          - label: "Learning resource concept"
+            name: index_learning_resource_concept
+            widget: image
+          - label: "Live event production"
+            name: index_live_event_production
+            widget: image
+          - label: "Professional portrait image"
+            name: index_portrait_for_taylor_frucel
+            widget: image
+          - label: "Public relations portfolio"
+            name: index_public_relations_portfolio
+            widget: image
+          - label: "Brand marketing gallery 1"
+            name: services_brand_marketing_gallery_1
+            widget: image
+          - label: "Brand marketing gallery 2"
+            name: services_brand_marketing_gallery_2
+            widget: image
+          - label: "Brand marketing gallery 3"
+            name: services_brand_marketing_gallery_3
+            widget: image
+          - label: "Business consulting gallery 1"
+            name: services_business_consulting_gallery_1
+            widget: image
+          - label: "Business consulting gallery 2"
+            name: services_business_consulting_gallery_2
+            widget: image
+          - label: "Business consulting gallery 3"
+            name: services_business_consulting_gallery_3
+            widget: image
+          - label: "Event production gallery 1"
+            name: services_event_production_gallery_1
+            widget: image
+          - label: "Event production gallery 2"
+            name: services_event_production_gallery_2
+            widget: image
+          - label: "Event production gallery 3"
+            name: services_event_production_gallery_3
+            widget: image
+          - label: "Partnerships gallery 1"
+            name: services_partnerships_gallery_1
+            widget: image
+          - label: "Partnerships gallery 2"
+            name: services_partnerships_gallery_2
+            widget: image
+          - label: "Partnerships gallery 3"
+            name: services_partnerships_gallery_3
+            widget: image
+          - label: "PR media gallery 1"
+            name: services_pr_media_gallery_1
+            widget: image
+          - label: "PR media gallery 2"
+            name: services_pr_media_gallery_2
+            widget: image
+          - label: "PR media gallery 3"
+            name: services_pr_media_gallery_3
+            widget: image
+          - label: "Talent entertainment gallery 1"
+            name: services_talent_entertainment_gallery_1
+            widget: image
+          - label: "Talent entertainment gallery 2"
+            name: services_talent_entertainment_gallery_2
+            widget: image
+          - label: "Talent entertainment gallery 3"
+            name: services_talent_entertainment_gallery_3
+            widget: image
+          - label: "Entertainment & Talent portfolio"
+            name: work_entertainment_talent_portfolio
+            widget: image
