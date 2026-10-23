@@ -25,12 +25,21 @@ function initNavigation(){
     });
     $$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>{mobile.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.innerHTML='<span aria-hidden="true">☰</span>';}));
   }
-  const page=(location.pathname.split("/").pop()||"index.html").toLowerCase();
-  $$("[data-nav]").forEach(a=>{
-    const target=(a.getAttribute("href")||"").split("?")[0].split("#")[0].toLowerCase();
-    const isCurrent=target===page || (page==="" && target==="index.html");
-    a.classList.toggle("active",isCurrent);
-    if(isCurrent) a.setAttribute("aria-current","page");
+
+  // Get clean current path (e.g., "/about" instead of "/about.html")
+  const currentPath = location.pathname.replace(/\.html$/, '').toLowerCase();
+
+  $$("[data-nav]").forEach(a => {
+    // Get the absolute link path relative to the domain root
+    const linkPath = a.pathname.replace(/\.html$/, '').toLowerCase();
+    
+    // Check if it's the home page or a matching subpage
+    const isCurrent = (currentPath === '/' || currentPath === '/index') 
+      ? (linkPath === '/' || linkPath === '/index')
+      : (linkPath === currentPath);
+
+    a.classList.toggle("active", isCurrent);
+    if(isCurrent) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
   });
 }
