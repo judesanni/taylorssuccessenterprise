@@ -56,3 +56,48 @@
 
 /* Keep directional arrows as text glyphs rather than emoji on mobile */
 .btn, .text-link, .archive-link, .event-footer a { font-variant-emoji: text; }
+
+
+/* Featured brand reference carousel */
+.brand-showcase{padding:76px 0 68px;overflow:hidden;background:#fff}
+.brand-showcase-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:14px}
+.brand-showcase-title{font-size:clamp(2.1rem,4.2vw,3.6rem);line-height:.98;letter-spacing:-.055em;margin:12px 0 0}
+.brand-showcase-title em{color:var(--red);font-weight:500}
+.brand-motion-toggle{border:1px solid var(--line);background:transparent;border-radius:999px;padding:10px 16px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.brand-showcase-note{font-size:.76rem;color:var(--muted);max-width:780px;margin:0 0 28px}
+.brand-marquee{overflow:hidden;position:relative;width:100%;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.brand-marquee-track{display:flex;align-items:center;gap:24px;width:max-content;padding:8px 24px;animation:brand-drift 38s linear infinite}
+.brand-marquee:hover .brand-marquee-track,.brand-marquee.is-paused .brand-marquee-track{animation-play-state:paused}
+.brand-logo-item{width:178px;height:88px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;padding:20px 24px;border:1px solid rgba(23,23,25,.08);border-radius:18px;background:#fff}
+.brand-logo-item img{max-width:100%;max-height:46px;width:auto;height:auto;object-fit:contain}
+.brand-logo-item .logo-fallback{display:none;font-weight:800;font-size:1.3rem;letter-spacing:-.045em;text-align:center;color:#171719}
+.brand-logo-item.logo-fallback-active img{display:none}
+.brand-logo-item.logo-fallback-active .logo-fallback{display:block}
+.brand-logo-text .logo-fallback{display:block;font-size:1.15rem;letter-spacing:.08em}
+.brand-logo-text.investfest .logo-fallback{font-size:1rem;letter-spacing:.12em}
+.brand-logo-text.zeus .logo-fallback{font-size:1.35rem;letter-spacing:.18em}
+.brand-logo-text.zeus small{display:block;font-size:.52rem;letter-spacing:.28em;text-align:center;margin-top:3px}
+@keyframes brand-drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Grammy-season concept card */
+.grammy-preview-section{padding-top:30px}
+.grammy-preview{display:grid;grid-template-columns:minmax(0, .92fr) minmax(0,1.08fr);overflow:hidden;border-radius:28px;background:#171719;color:#fff;box-shadow:var(--shadow)}
+.grammy-preview-art{position:relative;min-height:540px;background:#26201d;overflow:hidden}
+.grammy-event-photo{width:100%;height:100%;min-height:540px;object-fit:cover;opacity:.62;position:absolute;inset:0}
+.grammy-preview-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58))}
+.grammy-trophy-mark{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-58%);height:170px;width:auto;max-width:90%;filter:brightness(0) invert(1);opacity:.96}
+.grammy-art-label{position:absolute;z-index:3;bottom:22px;left:24px;right:24px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.grammy-preview-copy{padding:clamp(28px,5vw,64px);align-self:center}
+.grammy-preview-copy .eyebrow{color:#e6c780}
+.grammy-preview-copy .h2{margin-top:18px}
+.grammy-preview-copy .h2 em{color:#e6c780}
+.grammy-preview-copy .lead{color:#e6e0d9}
+.grammy-preview-copy>p:not(.lead){color:#d0cbc5}
+.event-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0}
+.event-facts span{font-size:.8rem;color:#d0cbc5;border-top:1px solid rgba(255,255,255,.22);padding-top:10px}
+.event-facts strong{display:block;color:#fff;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.grammy-preview-copy .btn-outline{border-color:rgba(255,255,255,.5);color:#fff}
+.grammy-preview-copy .btn-outline:hover{background:#fff;color:#171719}
+.grammy-disclaimer{font-size:.72rem!important;line-height:1.55;color:#b7b0a9!important;margin-top:22px}
+@media(max-width:820px){.brand-showcase-head{align-items:start;flex-direction:column}.brand-showcase{padding:58px 0}.brand-logo-item{width:150px;height:78px}.brand-marquee-track{gap:14px}.grammy-preview{grid-template-columns:1fr}.grammy-preview-art,.grammy-event-photo{min-height:300px;height:300px}.grammy-trophy-mark{height:120px}.event-facts{grid-template-columns:1fr;gap:8px}.event-facts span{padding-top:8px}}
+@media(prefers-reduced-motion:reduce){.brand-marquee-track{animation:none!important}}

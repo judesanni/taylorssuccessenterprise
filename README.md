@@ -1,144 +1,175 @@
-# taylorssuccessenterprise
-Website
-[README.md](https://github.com/user-attachments/files/33851538/README.md)
-# Taylor Success Enterprise — Netlify + Decap CMS website
+# Taylor Success Enterprise Website
 
-This is a static, multi-page website prepared for deployment through Netlify and image management through Decap CMS with the Decap Turbo GitHub backend.
+Static, responsive multi-page website for Taylor Success Enterprise. Deploys from GitHub to Netlify and uses Decap Turbo for image management plus a small editable content file for the Grammy-season event preview.
 
-## Included pages and tools
+## Included
 
-- `index.html` — Home
-- `about.html` — About Taylor
-- `services.html` — Services and service-detail modals
-- `work.html` — Portfolio categories
-- `events.html` — Events and official Eventbrite organizer link
-- `resource-center.html` — Proposed Community Resource & Event Center
-- `contact.html` — Inquiry form configured for Netlify Forms
-- `thank-you.html` — Post-submission confirmation page
-- `privacy.html` — Privacy Policy
-- `terms.html` — Terms & Conditions
-- `cookies.html` — Cookie Policy
-- `admin/` — Decap CMS image-editing dashboard
-- `data/site-images.json` — Image slots managed through the CMS
-- `uploads/` — Destination for images uploaded in the CMS
+- `index.html`, `about.html`, `services.html`, `work.html`, `events.html`, `resource-center.html`, `contact.html`
+- Legal pages: `privacy.html`, `terms.html`, `cookies.html`
+- `thank-you.html` for the contact form redirect
+- `assets/styles.css`, `assets/site.js`
+- `admin/config.yml`, `admin/index.html` for Decap CMS
+- `data/site-images.json` for CMS-managed image slots
+- `data/event-content.json` for the editable Grammy-season event preview copy
+- `uploads/.gitkeep` as the image upload destination
+- `robots.txt` and `sitemap.xml` for basic technical SEO
+- `netlify.toml` with static publishing and basic security headers
 
-The legal pages are practical website copy, not a substitute for advice from a qualified attorney. Review the legal pages against the actual business, data practices, contracts, and applicable law before launch.
+The legal pages are practical website copy, not legal advice. Review them against the actual business, data practices, and applicable requirements before launch.
 
-## Recommended order of setup
+## Deployment information
 
-1. Confirm the code is in GitHub repository `judesanni/taylorsuccessenterprise` on branch `main`.
-2. Connect that repository to Netlify and deploy the site.
-3. Confirm Netlify Forms detects the contact form and set up an email notification.
-4. Configure Decap Turbo and the image editor.
-5. Test all site functions and image editing on the Netlify preview URL.
-6. Connect `taylorssuccessenterprise.com` in Netlify and update DNS in GoDaddy.
-7. Re-test forms, HTTPS, CMS sign-in, and all pages on the custom domain.
+- GitHub repository: `judesanni/taylorssuccessenterprise`
+- Branch: `main`
+- Current Netlify preview: `https://fascinating-sundae-4685be.netlify.app`
+- Intended custom domain: `https://taylorssuccessenterprise.com`
+- Decap Turbo Site ID: `5b0cfd08-3a1d-4bad-b214-b8e563504b97`
+- Contact phone: `(443) 347-3239`
+- Contact email: `tsenterprisesatlanta@gmail.com`
 
-## 1. Deploy from GitHub to Netlify
+Upload the extracted contents of this ZIP to the repository root. Do not upload the ZIP itself and do not put the files inside an extra nested folder. The repository root should directly contain `index.html`, `netlify.toml`, `admin/`, `assets/`, and `data/`.
 
-1. Sign in to Netlify and choose **Add new site / Import an existing project** (the exact label may vary).
-2. Choose GitHub and authorize Netlify to access the repository `judesanni/taylorsuccessenterprise`.
-3. Select branch `main`. This is a plain static HTML site, so no build command is required. The included `netlify.toml` publishes the repository root (`.`).
-4. Deploy. Open the generated `https://your-site-name.netlify.app` address and test the pages.
-5. For future updates, upload/commit changes to GitHub. Netlify will automatically redeploy the branch connected to the site.
+## Before publishing
 
-Do not upload the ZIP file itself into the repository. Upload the ZIP's extracted contents so that `index.html`, `netlify.toml`, `assets/`, `admin/`, and the other files are at the repository root, not buried inside an extra nested folder.
+1. Review the copy, phone number, email, Instagram URL, and Eventbrite link.
+2. Replace the homepage portrait placeholder with Taylor's approved professional portrait. The stock portrait is not Taylor.
+3. Replace stock event and portfolio imagery with real, approved photos when available. Do not present illustrative stock photos as actual client work.
+4. Keep only brand marks Taylor has permission to display and that accurately represent her relationship with each organization. The logo strip includes visual placeholders and does not assert endorsement or a working relationship.
+5. Confirm the Grammy-season concept with Taylor before promoting it. The 2027 GRAMMY Awards are scheduled for February 7, 2027; the proposed Taylor Success Enterprise event has no confirmed date, venue, hosts, lineup, ticketing, or affiliation. The website clearly labels it as a separate concept and not an official GRAMMY Awards event.
+6. Confirm the final domain, renew it if needed, and connect it to Netlify as described below.
 
-## 2. Netlify Forms: collect submissions and send email alerts
+## Netlify deployment and credit-saving approach
 
-The contact form is configured with `data-netlify="true"`, a unique `name="contact"`, a hidden `form-name`, required fields, a spam honeypot, and a redirect to `/thank-you.html`.
+This is a static HTML site. `netlify.toml` publishes the repository root (`.`); no build command is needed.
 
-After the first deploy:
+1. Make the planned changes in GitHub and batch them into one commit where possible.
+2. Wait for the automatic Netlify deploy to complete.
+3. Test the preview site before connecting the custom domain.
+4. Avoid repeated production deploys for tiny copy changes while preparing the launch. Decap saves to GitHub and normally triggers a Netlify deploy, so each published CMS change can also use deploy/usage credits.
+5. Check current Netlify usage and plan limits in the dashboard. Limits and credit costs can change.
 
-1. Open the site in Netlify and go to **Forms**.
-2. If form detection is disabled, enable it, then trigger a new deploy so Netlify scans the static HTML.
-3. Confirm a form named `contact` appears. If it does not, check the deployed `contact.html` and redeploy.
-4. Under **Forms → Submission notifications** (or the current equivalent), add an email notification for `tsenterprisesatlanta@gmail.com`.
-5. Submit a real test inquiry from the deployed website. Confirm the thank-you page appears, the submission is visible in Netlify's Forms dashboard, and the email arrives. Check spam/junk. The email notification is not configured by the HTML itself.
-6. Restrict Netlify dashboard access to trusted administrators because submissions contain personal information. Periodically review and delete submissions that no longer need to be retained.
+## Decap Turbo CMS
 
-Netlify's interface and plan limits can change. Check the current plan and usage limits before launch. A successful thank-you redirect alone is not proof that the submission was stored; verify both the dashboard entry and notification.
+Open the CMS at:
 
-## 3. Decap CMS: allow Taylor to change images
+`https://fascinating-sundae-4685be.netlify.app/admin/`
 
-The CMS at `/admin/` edits the image paths in `data/site-images.json`; image uploads are stored in `uploads/`. It does not currently provide a full visual editor for page text, events, or portfolio entries.
+The current `admin/config.yml` contains the supplied Turbo Site ID and the current Netlify preview URL.
 
-### Important ownership and seat decision
+### Editable in Decap
 
-Decap Turbo's free organization currently includes one site and one seat. If Taylor must be the only CMS editor, the cleanest ownership arrangement is for Taylor to own the Decap Turbo organization and use her own login. Since the GitHub repository is owned by `judesanni`, the GitHub repository owner must authorize the Decap Turbo GitHub App for this repository. Do not share passwords. If both Jude and Taylor need separate Decap Turbo logins, check current seat pricing first.
+- **Website Images → Image Library:** image slots in `data/site-images.json`, including the homepage portrait slot, homepage feature images, service galleries, portfolio imagery, and the Grammy-season event image.
+- **Website Content → Grammy Season Event:** eyebrow, title, short introduction, event description, timing label, location, registration status, and inquiry button label stored in `data/event-content.json`.
 
-### Configure Decap Turbo
+The rest of the website's copy and structure are still coded into the HTML. Decap does not yet edit all page text, service entries, portfolio cards, or create new events. Those changes require a code update or a further CMS configuration.
 
-1. First deploy the site to Netlify so the `/admin/` URL exists.
-2. Open Decap Turbo at `https://decapcms.org/turbo/`. Create the organization/account that will own the CMS site. The free plan is currently one site and one seat; verify current terms.
-3. In the Turbo organization, open **Git connection** and connect GitHub. Install/authorize the Decap Turbo GitHub App for the repository `judesanni/taylorsuccessenterprise`. Since the repository is under Jude's GitHub account, the account owner must approve access and select only this repository if the installation screen offers repository scoping.
-4. Create a Turbo site using GitHub repository `judesanni/taylorsuccessenterprise`, branch `main`, and config path `admin/config.yml`.
-5. In the site's settings/Overview, add the Netlify admin URL as an allowed **Admin interface URL**. Use the generated URL first, for example `https://YOUR-SITE-NAME.netlify.app/admin/`. Add `https://taylorssuccessenterprise.com/admin/` after the custom domain is live. The exact URL must match the real deployed site.
-6. Copy the Turbo **Site ID** from its Overview page.
-7. Edit `admin/config.yml` in GitHub. Replace `YOUR_DECAP_TURBO_SITE_ID` with the copied ID and replace `https://YOUR-NETLIFY-SITE.netlify.app` with the actual Netlify URL. Keep `backend.name: turbo-github` and `branch: main`. Do not add a `repo` field; Turbo's site dashboard is authoritative for the repository.
-8. Commit the changes to `main` and wait for Netlify to redeploy.
-9. Open `https://YOUR-SITE-NAME.netlify.app/admin/`, sign in with the Turbo account that has access to this site, and open **Website Images → Image Library**.
-10. Replace one low-risk image first, save/publish, wait for the Netlify deploy, and verify the updated image on the public site. Then test the remaining image slots as needed.
-11. After connecting the custom domain, add that exact `/admin/` URL to the Turbo site's allowed admin URLs and test sign-in again.
+### How image uploads work
 
-### What image editing does and does not cover
+- `media_folder: "uploads"` means new uploads are committed into the repository's `uploads/` folder.
+- `public_folder: "/uploads"` means the published site references uploaded files from `/uploads/...`.
+- The folder now exists with a `.gitkeep` file. Decap can add image files when an editor uploads and saves them.
+- The current image library starts with external Unsplash image URLs. When replacing a slot, choose/upload the approved image and publish. Confirm the generated path and public image after the Netlify deployment.
+- Prefer optimized JPG/WebP images, ideally around 500 KB or less where practical, with a long edge around 1600–2200 px.
+- Upload only images the business owns or has permission to publish. Taylor's permission to download her own content does not automatically clear third-party people, music, or other assets visible in a post.
 
-Taylor can replace the 29 configured image slots. She can upload images, choose them for a slot, and publish the change without editing HTML or CSS. The CMS does not currently let her add brand-new portfolio entries, write event listings, change all page text, or change the site layout. Those changes require code/CMS-model updates by the developer. Use optimized JPG or WebP images, preferably under about 500 KB each where practical, with a long edge around 1600–2200 px. Only upload images the business owns or has permission to publish. Replace illustrative stock photos with approved client/project images before representing them as real work or Taylor herself.
+### CMS access and authentication
 
-## 4. Can CloudCannon be used to test?
+The Decap Turbo dashboard must have GitHub connected and authorized for `judesanni/taylorssuccessenterprise` on branch `main`. In the Turbo site's settings, make sure the allowed Admin interface URL includes:
 
-Yes. You can create a CloudCannon account and use its trial to connect the same GitHub repository and evaluate its visual editor. The official pricing page currently lists a 21-day trial and a paid Standard plan; confirm the current price and trial terms before starting. CloudCannon is a separate CMS/editor option, not an extra requirement for Netlify or Decap.
+`https://fascinating-sundae-4685be.netlify.app/admin/`
 
-Do not configure Decap CMS and CloudCannon as two production editors for the same content at the same time. They are separate systems and can create confusing workflows or conflicting changes. For this project, Decap is already configured specifically for the image slots. CloudCannon may be better if you later want broader visual editing of text and page content, but the existing HTML would need testing and possibly additional CloudCannon-specific editable regions/configuration. A trial ending does not mean it remains free.
+Do not share passwords. If Taylor needs a separate login, check the current Decap Turbo seat and ownership terms first.
 
-Official CloudCannon pricing: https://cloudcannon.com/pricing/
-Official Decap Turbo setup: https://decapcms.org/docs/turbo-getting-started/
-Official Decap Turbo site connection: https://decapcms.org/docs/turbo-connecting-a-site/
+### After the custom domain is connected
 
-## 5. Connect the GoDaddy domain to Netlify
+1. Add the exact URL `https://taylorssuccessenterprise.com/admin/` to the allowed Admin interface URLs in Decap Turbo.
+2. Update `site_url` in `admin/config.yml` to `https://taylorssuccessenterprise.com`.
+3. Commit and deploy that config change.
+4. Test the CMS at the custom-domain `/admin/` address and confirm sign-in and image publishing.
+5. Keep `turbo_site_id` and `branch: main` unchanged unless the Decap Turbo site or repository branch itself changes.
 
-The domain intended for this site is `taylorssuccessenterprise.com`. Keep the domain registered at GoDaddy if desired; hosting can be Netlify. You do not need to transfer the domain registration or change nameservers to connect it.
+### Important limitation about current external image URLs
 
-1. In Netlify, open the deployed site and go to **Domain management** (sometimes called **Domains** or **Site configuration → Domain management**).
-2. Choose **Add a domain / Add custom domain** and enter `taylorssuccessenterprise.com`. Add `www.taylorssuccessenterprise.com` too if Netlify does not add it automatically. Follow the exact DNS instructions shown by Netlify for this site.
-3. In a separate tab, sign in to GoDaddy and open **My Products → Domains → taylorssuccessenterprise.com → DNS / Manage DNS**.
-4. Add or update only the DNS records Netlify instructs you to use. Commonly, the apex/root `@` is connected with the A/ALIAS-style record Netlify specifies and `www` is connected with a CNAME to the Netlify site hostname, but follow the live instructions shown for this site rather than relying on copied example values.
-5. Remove only conflicting records for the same host (`@` or `www`) if Netlify says they conflict. **Do not delete MX records or unrelated TXT records**, because those may control the client's email, domain verification, or other services.
-6. Save the DNS changes and wait for propagation. This can be quick or take up to 24–48 hours depending on DNS caching and registrar behavior.
-7. Return to Netlify's Domain management and wait for the domain to verify and HTTPS/TLS certificate to provision. Set `taylorssuccessenterprise.com` or `www` as the primary domain, then ensure the other version redirects to it.
-8. Test both `https://taylorssuccessenterprise.com` and `https://www.taylorssuccessenterprise.com`; check that one redirects consistently to the chosen primary domain and the browser shows a valid secure connection.
-9. After the domain works, add `https://taylorssuccessenterprise.com/admin/` (and the `www` version only if used) to Decap Turbo's allowed admin URLs. Update `site_url` in `admin/config.yml` to the actual primary public URL if desired, commit, and let Netlify redeploy.
+The website currently loads the values in `data/site-images.json` dynamically and uses a fallback image if the JSON cannot be loaded. The existing values are remote Unsplash URLs. Decap's image widget is configured for uploads into `/uploads`; when an image is replaced, confirm the CMS saves a usable path and that the updated image appears on the deployed site. If the image picker refuses to display a remote URL value, replace that slot with an uploaded image rather than trying to type a remote URL into the image picker.
 
-**Email warning:** changing nameservers is not required for this setup. If you do decide to change nameservers, first migrate and verify all email-related DNS records. For this task, editing only the necessary GoDaddy DNS records is safer.
+## Contact form
 
-## 6. Legal pages and cookies
+The contact form is configured for Netlify Forms with the name `project-inquiry`, a hidden form-name input, a honeypot field, and a redirect to `/thank-you.html`.
 
-The website now includes Privacy Policy, Terms & Conditions, and Cookie Policy pages linked from the footer across the site. The contact form's required consent checkbox links to the Privacy Policy; the marketing updates checkbox is optional and separate.
+After deploying:
 
-The current site does not intentionally include analytics or advertising pixels, so a cookie-consent banner has not been added. It does request third-party fonts and images, and the policy discloses that. If analytics, ad pixels, embedded social feeds/videos, or other non-essential tracking are added later, reassess cookie consent and update the policy before enabling those tools. Have the business's attorney review the legal pages before launch; no generic policy can guarantee compliance in every situation.
+1. Open the site in Netlify and check **Forms**.
+2. If form detection is disabled, enable it and trigger a deploy so Netlify scans the HTML.
+3. Confirm `project-inquiry` appears.
+4. Configure a submission email notification for `tsenterprisesatlanta@gmail.com`.
+5. Submit a real test enquiry. Verify the submission appears in Netlify Forms and the email arrives (check spam/junk too).
+6. Restrict dashboard access because submissions contain personal information.
 
-## 7. Final launch checklist
+A thank-you redirect alone does not prove a submission was stored. Verify the dashboard entry and notification.
 
-- [ ] All pages load from the Netlify preview URL and custom domain.
-- [ ] Main navigation, mobile navigation, CTAs, service modals, portfolio filters, and Eventbrite link work.
-- [ ] Legal links appear in the footer on every page; Privacy Policy link opens from the contact form consent text.
-- [ ] Netlify detects the `contact` form after deployment.
-- [ ] A real form submission appears in Netlify Forms and an email alert reaches `tsenterprisesatlanta@gmail.com`.
-- [ ] Invalid or missing required fields are blocked by browser validation.
-- [ ] Thank-you redirect works and form submission is actually stored.
-- [ ] The spam honeypot field remains hidden and is named `bot-field`.
-- [ ] Decap Turbo Site ID and real Netlify URL have replaced placeholders in `admin/config.yml`.
-- [ ] Decap sign-in works from the deployed `/admin/` URL; the CMS can update an image and publish a new deploy.
-- [ ] The custom domain resolves to Netlify and HTTPS is active for the primary domain.
-- [ ] GoDaddy email-related MX/TXT records remain intact.
-- [ ] Replace stock/illustrative imagery with client-approved imagery where appropriate.
-- [ ] Confirm client metrics, social links, service descriptions, event details, and proposed funding content before public launch.
-- [ ] Keep Netlify, GitHub, and Decap access limited to authorized people; use individual accounts and strong passwords.
+## Custom domain through GoDaddy
 
-## 8. Maintenance
+The site can remain hosted on Netlify while the domain is registered at GoDaddy. Do not buy GoDaddy web hosting just to publish this static site.
 
-- **Images:** `/admin/` after Decap setup.
-- **Text, layout, code, new work/event entries:** GitHub code changes and commit, or extend the CMS content model first.
-- **Form entries and email alerts:** Netlify dashboard → Forms.
-- **DNS and domain registration:** GoDaddy DNS; Netlify manages hosting and HTTPS.
-- **CMS authentication and allowed admin URLs:** Decap Turbo dashboard.
+1. In Netlify, open Domain management and add `taylorssuccessenterprise.com` (and `www` if appropriate).
+2. Follow the exact DNS records Netlify gives you for this site.
+3. In GoDaddy DNS management, change only the records needed for the website. Do not delete MX records or unrelated TXT records, as these may control email and verification.
+4. Wait for DNS propagation and Netlify HTTPS provisioning.
+5. Test the root domain, `www` redirect, all pages, contact form, CMS sign-in, and images.
+
+Domain renewal does not automatically renew a separate email subscription. Confirm the exact domain renewal product and price in Taylor's GoDaddy account before paying.
+
+## Basic SEO included
+
+- Unique page titles and meta descriptions
+- Canonical URLs using the intended custom domain
+- Open Graph and Twitter sharing metadata
+- `robots.txt` and `sitemap.xml`
+- `ProfessionalService` structured data on the homepage
+- Existing semantic headings, page descriptions, and image alt text
+- `thank-you.html` marked `noindex, nofollow`
+
+The canonical URLs and sitemap already use `taylorssuccessenterprise.com`, which is the intended launch domain. Do not treat the SEO setup as fully live until that domain resolves to this Netlify site.
+
+### After launch
+
+1. Verify the domain uses HTTPS and the canonical URL is correct.
+2. Set up Google Search Console and submit `https://taylorssuccessenterprise.com/sitemap.xml`.
+3. Optionally verify the site in Bing Webmaster Tools.
+4. Replace all placeholders with approved business details and real work.
+5. Add useful case studies, event recaps, service details, and testimonials only when accurate and approved.
+6. Check index coverage and search queries over time. No SEO setup can guarantee ranking or immediate visibility.
+
+## Logo carousel and brand usage
+
+The homepage includes a continuously moving logo-reference strip with a pause button and reduced-motion support. Most logo images load from Wikimedia Commons file redirects; the Invest Fest 2026 logo is referenced from the official Invest Fest site. The Invest Fest asset is a 2026 placeholder, not a confirmed 2027 event identity. Zeus Network loads from a Wikimedia file reference. If a remote logo is unavailable, a text fallback appears. Confirm permissions and relationship accuracy before launch; remove any brand that is not approved. The assets are externally hosted rather than bundled locally, so check their loading before launch.
+
+## Grammy-season event concept
+
+The Events page includes an **in-development** preview for a separate event concept around the February 2027 GRAMMY Awards season. The official awards date is February 7, 2027, according to the Recording Academy: https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/
+
+The event preview intentionally says that its date, venue, hosts, and registration are not confirmed. It is not described as an official GRAMMY event and includes a non-affiliation disclaimer. The photo is a generic live-event placeholder; the GRAMMY Awards lockup is a logo reference, not official 2027 event artwork. Replace both with approved assets before a public promotional push.
+
+## Launch QA checklist
+
+- [ ] Confirm the domain is renewed and owned/managed by the right person.
+- [ ] Replace the stock portrait with Taylor's approved portrait via Decap.
+- [ ] Replace stock photos with approved photos where available.
+- [ ] Confirm featured logos and relationships with Taylor; remove unapproved marks.
+- [ ] Confirm Grammy-season event concept, wording, date, location, host, and CTA with Taylor.
+- [ ] Test all pages, desktop/mobile navigation, active navigation underline, links, filters, and service modals.
+- [ ] Test the moving logo carousel, pause control, and reduced-motion behaviour.
+- [ ] Test image replacement and event copy editing in Decap.
+- [ ] Verify the Netlify contact form, submission storage, and email notification.
+- [ ] Connect custom domain and HTTPS without disturbing email DNS.
+- [ ] Update Decap's allowed admin URL and `site_url` after the custom domain is live.
+- [ ] Submit sitemap to Google Search Console and verify indexing later.
+- [ ] Confirm final site ownership, GitHub/Netlify/Decap access, and ongoing maintenance arrangements.
+
+## Official reference links
+
+- Decap Turbo setup: https://decapcms.org/docs/turbo-getting-started/
+- Decap Turbo site connection: https://decapcms.org/docs/turbo-connecting-a-site/
+- Netlify Forms: https://docs.netlify.com/forms/setup/
+- Google Search Console: https://search.google.com/search-console/
+- 2027 GRAMMY Awards official date announcement: https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/

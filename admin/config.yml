@@ -1,9 +1,9 @@
 backend:
   name: turbo-github
-  turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
+  turbo_site_id: 5b0cfd08-3a1d-4bad-b214-b8e563504b97
   branch: main
 
-site_url: https://YOUR-NETLIFY-SITE.netlify.app
+site_url: https://fascinating-sundae-4685be.netlify.app
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -18,89 +18,127 @@ collections:
         format: "json"
         fields:
           - label: "People connecting at a professional event"
-            name: about_people_connecting_at_a_professiona
-            widget: image
+            name: "about_people_connecting_at_a_professiona"
+            widget: "image"
           - label: "Branding portfolio"
-            name: index_branding_portfolio
-            widget: image
+            name: "index_branding_portfolio"
+            widget: "image"
           - label: "Community in Motion"
-            name: index_community_in_motion
-            widget: image
+            name: "index_community_in_motion"
+            widget: "image"
           - label: "Coworking space concept"
-            name: index_coworking_space_concept
-            widget: image
+            name: "index_coworking_space_concept"
+            widget: "image"
           - label: "Event venue concept"
-            name: index_event_venue_concept
-            widget: image
+            name: "index_event_venue_concept"
+            widget: "image"
           - label: "Index CTA image"
-            name: index_index_cta_image
-            widget: image
+            name: "index_index_cta_image"
+            widget: "image"
           - label: "Learning resource concept"
-            name: index_learning_resource_concept
-            widget: image
+            name: "index_learning_resource_concept"
+            widget: "image"
           - label: "Live event production"
-            name: index_live_event_production
-            widget: image
+            name: "index_live_event_production"
+            widget: "image"
           - label: "Professional portrait image"
-            name: index_portrait_for_taylor_frucel
-            widget: image
+            name: "index_portrait_for_taylor_frucel"
+            widget: "image"
+            hint: "Replace the stock placeholder with Taylor's approved professional portrait."
           - label: "Public relations portfolio"
-            name: index_public_relations_portfolio
-            widget: image
+            name: "index_public_relations_portfolio"
+            widget: "image"
           - label: "Brand marketing gallery 1"
-            name: services_brand_marketing_gallery_1
-            widget: image
+            name: "services_brand_marketing_gallery_1"
+            widget: "image"
           - label: "Brand marketing gallery 2"
-            name: services_brand_marketing_gallery_2
-            widget: image
+            name: "services_brand_marketing_gallery_2"
+            widget: "image"
           - label: "Brand marketing gallery 3"
-            name: services_brand_marketing_gallery_3
-            widget: image
+            name: "services_brand_marketing_gallery_3"
+            widget: "image"
           - label: "Business consulting gallery 1"
-            name: services_business_consulting_gallery_1
-            widget: image
+            name: "services_business_consulting_gallery_1"
+            widget: "image"
           - label: "Business consulting gallery 2"
-            name: services_business_consulting_gallery_2
-            widget: image
+            name: "services_business_consulting_gallery_2"
+            widget: "image"
           - label: "Business consulting gallery 3"
-            name: services_business_consulting_gallery_3
-            widget: image
+            name: "services_business_consulting_gallery_3"
+            widget: "image"
           - label: "Event production gallery 1"
-            name: services_event_production_gallery_1
-            widget: image
+            name: "services_event_production_gallery_1"
+            widget: "image"
           - label: "Event production gallery 2"
-            name: services_event_production_gallery_2
-            widget: image
+            name: "services_event_production_gallery_2"
+            widget: "image"
           - label: "Event production gallery 3"
-            name: services_event_production_gallery_3
-            widget: image
+            name: "services_event_production_gallery_3"
+            widget: "image"
           - label: "Partnerships gallery 1"
-            name: services_partnerships_gallery_1
-            widget: image
+            name: "services_partnerships_gallery_1"
+            widget: "image"
           - label: "Partnerships gallery 2"
-            name: services_partnerships_gallery_2
-            widget: image
+            name: "services_partnerships_gallery_2"
+            widget: "image"
           - label: "Partnerships gallery 3"
-            name: services_partnerships_gallery_3
-            widget: image
+            name: "services_partnerships_gallery_3"
+            widget: "image"
           - label: "PR media gallery 1"
-            name: services_pr_media_gallery_1
-            widget: image
+            name: "services_pr_media_gallery_1"
+            widget: "image"
           - label: "PR media gallery 2"
-            name: services_pr_media_gallery_2
-            widget: image
+            name: "services_pr_media_gallery_2"
+            widget: "image"
           - label: "PR media gallery 3"
-            name: services_pr_media_gallery_3
-            widget: image
+            name: "services_pr_media_gallery_3"
+            widget: "image"
           - label: "Talent entertainment gallery 1"
-            name: services_talent_entertainment_gallery_1
-            widget: image
+            name: "services_talent_entertainment_gallery_1"
+            widget: "image"
           - label: "Talent entertainment gallery 2"
-            name: services_talent_entertainment_gallery_2
-            widget: image
+            name: "services_talent_entertainment_gallery_2"
+            widget: "image"
           - label: "Talent entertainment gallery 3"
-            name: services_talent_entertainment_gallery_3
-            widget: image
+            name: "services_talent_entertainment_gallery_3"
+            widget: "image"
           - label: "Entertainment & Talent portfolio"
-            name: work_entertainment_talent_portfolio
-            widget: image
+            name: "work_entertainment_talent_portfolio"
+            widget: "image"
+          - label: "Grammy season event image placeholder"
+            name: "events_grammy_season_placeholder"
+            widget: "image"
+            hint: "Replace the generic event photo with approved event imagery. Do not imply official GRAMMY affiliation."
+
+  - name: "site_content"
+    label: "Website Content"
+    files:
+      - name: "grammy_season_event"
+        label: "Grammy Season Event"
+        file: "data/event-content.json"
+        format: "json"
+        fields:
+          - label: "Event eyebrow"
+            name: "grammy_eyebrow"
+            widget: "string"
+          - label: "Event title"
+            name: "grammy_title"
+            widget: "string"
+          - label: "Short event introduction"
+            name: "grammy_subtitle"
+            widget: "text"
+          - label: "Event description"
+            name: "grammy_description"
+            widget: "text"
+          - label: "Timing shown on event card"
+            name: "grammy_timing"
+            widget: "string"
+          - label: "Location shown on event card"
+            name: "grammy_location"
+            widget: "string"
+          - label: "Registration status"
+            name: "grammy_registration"
+            widget: "string"
+          - label: "Inquiry button label"
+            name: "grammy_cta_label"
+            widget: "string"

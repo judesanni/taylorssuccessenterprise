@@ -106,6 +106,47 @@ function initFilters(){
     }));
   });
 }
+
+
+async function initCmsContent(){
+  try{
+    const response=await fetch('data/event-content.json',{cache:'no-store'});
+    if(!response.ok)return;
+    const content=await response.json();
+    $$('[data-cms-text]').forEach(el=>{
+      const key=el.dataset.cmsText;
+      if(typeof content[key]==='string' && content[key].trim())el.textContent=content[key];
+    });
+  }catch(error){/* Keep the built-in event copy if CMS content is unavailable. */}
+}
+
+function initBrandCarousel(){
+  const track=$(".brand-marquee-track"), viewport=$(".brand-marquee"), toggle=$(".brand-motion-toggle");
+  if(!track||!viewport)return;
+  // Duplicate the logo sequence once so the animation loops continuously.
+  if(!track.dataset.cloned){
+    const originals=[...track.children];
+    originals.forEach(item=>{
+      const copy=item.cloneNode(true);
+      copy.setAttribute("aria-hidden","true");
+      copy.querySelectorAll("img").forEach(img=>img.alt="");
+      track.appendChild(copy);
+    });
+    track.dataset.cloned="true";
+  }
+  $$(".brand-logo-item img",track).forEach(img=>{
+    img.addEventListener("error",()=>img.parentElement.classList.add("logo-fallback-active"),{once:true});
+    if(img.complete && img.naturalWidth===0)img.parentElement.classList.add("logo-fallback-active");
+  });
+  if(toggle){
+    toggle.addEventListener("click",()=>{
+      const paused=viewport.classList.toggle("is-paused");
+      toggle.setAttribute("aria-pressed",String(paused));
+      toggle.textContent=paused?"Resume logos":"Pause logos";
+    });
+  }
+}
+
 function initContactForm(){
   $$('[data-contact-form]').forEach(form=>{
     const params=new URLSearchParams(location.search),service=params.get('service');
@@ -117,4 +158,4 @@ function initContactForm(){
   });
 }
 
-document.addEventListener("DOMContentLoaded",()=>{initNavigation();initReveal();initCounters();initServiceModals();initFilters();initContactForm();initCmsImages()});
+document.addEventListener("DOMContentLoaded",()=>{initNavigation();initReveal();initCounters();initServiceModals();initFilters();initContactForm();initCmsImages();initCmsContent();initBrandCarousel()});
