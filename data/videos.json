@@ -1,0 +1,286 @@
+{
+  "videos": [
+    {
+      "id": "1245311343",
+      "title": "Taylor video 01",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": true,
+      "order": 1,
+      "published": true
+    },
+    {
+      "id": "1245311383",
+      "title": "Taylor video 02",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 2,
+      "published": true
+    },
+    {
+      "id": "1245311207",
+      "title": "Taylor video 03",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 3,
+      "published": true
+    },
+    {
+      "id": "1245311307",
+      "title": "Taylor video 04",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 4,
+      "published": true
+    },
+    {
+      "id": "1245311354",
+      "title": "Taylor video 05",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 5,
+      "published": true
+    },
+    {
+      "id": "1245311165",
+      "title": "Taylor video 06",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 6,
+      "published": true
+    },
+    {
+      "id": "1245310757",
+      "title": "Taylor video 07",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 7,
+      "published": true
+    },
+    {
+      "id": "1245311127",
+      "title": "Taylor video 08",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 8,
+      "published": true
+    },
+    {
+      "id": "1245311388",
+      "title": "Taylor video 09",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 9,
+      "published": true
+    },
+    {
+      "id": "1245311204",
+      "title": "Taylor video 10",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 10,
+      "published": true
+    },
+    {
+      "id": "1245311160",
+      "title": "Taylor video 11",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 11,
+      "published": true
+    },
+    {
+      "id": "1245310845",
+      "title": "Taylor video 12",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 12,
+      "published": true
+    },
+    {
+      "id": "1245311371",
+      "title": "Taylor video 13",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 13,
+      "published": true
+    },
+    {
+      "id": "1245310758",
+      "title": "Taylor video 14",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 14,
+      "published": true
+    },
+    {
+      "id": "1245310938",
+      "title": "Taylor video 15",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 15,
+      "published": true
+    },
+    {
+      "id": "1245311291",
+      "title": "Taylor video 16",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 16,
+      "published": true
+    },
+    {
+      "id": "1245311289",
+      "title": "Taylor video 17",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 17,
+      "published": true
+    },
+    {
+      "id": "1245310866",
+      "title": "Taylor video 18",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 18,
+      "published": true
+    },
+    {
+      "id": "1245310774",
+      "title": "Taylor video 19",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 19,
+      "published": true
+    },
+    {
+      "id": "1245311003",
+      "title": "Taylor video 20",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 20,
+      "published": true
+    },
+    {
+      "id": "1245310803",
+      "title": "Taylor video 21",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 21,
+      "published": true
+    },
+    {
+      "id": "1245311075",
+      "title": "Taylor video 22",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 22,
+      "published": true
+    },
+    {
+      "id": "1245310888",
+      "title": "Taylor video 23",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 23,
+      "published": true
+    },
+    {
+      "id": "1245310756",
+      "title": "Taylor video 24",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 24,
+      "published": true
+    },
+    {
+      "id": "1245310784",
+      "title": "Taylor video 25",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 25,
+      "published": true
+    },
+    {
+      "id": "1245310829",
+      "title": "Taylor video 26",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 26,
+      "published": true
+    },
+    {
+      "id": "1245310826",
+      "title": "Taylor video 27",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 27,
+      "published": true
+    },
+    {
+      "id": "1245310760",
+      "title": "Taylor video 28",
+      "description": "Add the confirmed Vimeo title and short description here.",
+      "category": "",
+      "featured": false,
+      "order": 28,
+      "published": true
+    }
+  ],
+  "unmatchedTitleCandidates": [
+    "WhatsApp Video 2026-10-25 at 21.50.41",
+    "Honored to expand here in Georgia",
+    "TAYLOR what do you do / who are you",
+    "I Heart Radio interview",
+    "The Big 3: legendary moments",
+    "The Plug: Lil Baby and DLE Radio",
+    "Be the brand. Build the brand. Sustain the brand.",
+    "Atlanta’s First Scanner Party recap",
+    "Head Publicist: behind the scenes",
+    "Life beyond revenue and income",
+    "Meet Taylor Frucel",
+    "Past event recap",
+    "Award recognition",
+    "2023 milestones",
+    "Iverson fashion show",
+    "Fashion show recap",
+    "Trap Music Awards recognition",
+    "Atlanta Day recap",
+    "World Cup rooftop experience",
+    "FIFA Rooftop Mixer",
+    "Multicultural Fashion Show",
+    "World Cup moments",
+    "Dreams are real",
+    "Google your brand",
+    "The Rise of the Woman",
+    "Taylor introduction",
+    "Networking and growth"
+  ],
+  "notes": "The Vimeo links and title list were supplied in different orders. IDs are intentionally given neutral labels rather than pairing titles incorrectly. Confirm each title in Vimeo, then update title, description and category."
+}

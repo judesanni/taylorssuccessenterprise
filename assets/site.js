@@ -158,4 +158,20 @@ function initContactForm(){
   });
 }
 
-document.addEventListener("DOMContentLoaded",()=>{initNavigation();initReveal();initCounters();initServiceModals();initFilters();initContactForm();initCmsImages();initCmsContent();initBrandCarousel()});
+
+async function initPortfolioGalleries(){
+ const modal=$("#portfolio-gallery"), modalGrid=$("#gallery-modal-grid"), modalTitle=$("#gallery-modal-title"), allGrid=$("#media-gallery");
+ if(!modal||!allGrid)return;
+ let data={galleries:[]}, videos={videos:[]};
+ try{[data,videos]=await Promise.all([fetch('data/portfolio-galleries.json').then(r=>r.json()),fetch('data/videos.json').then(r=>r.json())]);}catch(e){return;}
+ const videoMap=new Map((videos.videos||[]).map(v=>[v.id,v]));
+ const tile=(item)=>{if(item.type==='video'&&item.videoId){const title=item.title||videoMap.get(item.videoId)?.title||'Taylor video';return `<article class="media-tile"><iframe src="https://player.vimeo.com/video/${encodeURIComponent(item.videoId)}?title=0&byline=0&portrait=0" title="${escapeAttr(title)}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="media-caption">${escapeAttr(title)}</div></article>`;}if(item.image&&!item.image.includes('gallery-placeholder'))return `<article class="media-tile"><img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title||'Taylor Success Enterprise portfolio image')}" loading="lazy"><div class="media-caption">${escapeAttr(item.title||'Project image')}</div></article>`;return `<article class="media-tile media-placeholder"><div><strong>${escapeAttr(item.title||'Gallery image placeholder')}</strong><span>Replace image path in data/portfolio-galleries.json</span></div></article>`;};
+ const allItems=(data.galleries||[]).flatMap(g=>(g.items||[]).map(i=>({...i,category:g.title})));
+ allGrid.innerHTML=allItems.map(i=>tile(i)).join('');
+ $$('#gallery-filters [data-gallery-filter]').forEach(btn=>btn.addEventListener('click',()=>{ $$('#gallery-filters .filter-btn').forEach(b=>b.classList.toggle('active',b===btn)); const f=btn.dataset.galleryFilter; allGrid.innerHTML=allItems.filter(i=>f==='all'||i.type===f).map(i=>tile(i)).join('');}));
+ $$('[data-gallery-category]').forEach(card=>card.addEventListener('click',e=>{e.preventDefault();const g=(data.galleries||[]).find(x=>x.id===card.dataset.galleryCategory);if(!g)return;modalTitle.textContent=g.title;modalGrid.innerHTML=(g.items||[]).map(tile).join('');modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}));
+ $$('[data-gallery-close]').forEach(el=>el.addEventListener('click',()=>{modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');modalGrid.innerHTML='';document.body.classList.remove('modal-open');}));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open')){$('[data-gallery-close]').click();}});
+}
+
+document.addEventListener("DOMContentLoaded",()=>{initNavigation();initReveal();initCounters();initServiceModals();initFilters();initContactForm();initCmsImages();initCmsContent();initBrandCarousel();initPortfolioGalleries()});

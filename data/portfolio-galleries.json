@@ -1,0 +1,400 @@
+{
+  "galleries": [
+    {
+      "id": "event-production",
+      "title": "Event Production",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245311343",
+          "title": "Taylor video 01",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311383",
+          "title": "Taylor video 02",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311207",
+          "title": "Taylor video 03",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311307",
+          "title": "Taylor video 04",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311354",
+          "title": "Taylor video 05",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-event-production-6.jpg",
+          "title": "Event Production image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-event-production-7.jpg",
+          "title": "Event Production image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-event-production-8.jpg",
+          "title": "Event Production image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-event-production-9.jpg",
+          "title": "Event Production image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-event-production-10.jpg",
+          "title": "Event Production image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    },
+    {
+      "id": "conference-business",
+      "title": "Conference & Business Events",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245311165",
+          "title": "Taylor video 06",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310757",
+          "title": "Taylor video 07",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311127",
+          "title": "Taylor video 08",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311388",
+          "title": "Taylor video 09",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311204",
+          "title": "Taylor video 10",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-conference-business-6.jpg",
+          "title": "Conference & Business Events image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-conference-business-7.jpg",
+          "title": "Conference & Business Events image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-conference-business-8.jpg",
+          "title": "Conference & Business Events image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-conference-business-9.jpg",
+          "title": "Conference & Business Events image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-conference-business-10.jpg",
+          "title": "Conference & Business Events image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    },
+    {
+      "id": "pr-media",
+      "title": "PR & Media Campaigns",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245311160",
+          "title": "Taylor video 11",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310845",
+          "title": "Taylor video 12",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311371",
+          "title": "Taylor video 13",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310758",
+          "title": "Taylor video 14",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310938",
+          "title": "Taylor video 15",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-pr-media-6.jpg",
+          "title": "PR & Media Campaigns image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-pr-media-7.jpg",
+          "title": "PR & Media Campaigns image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-pr-media-8.jpg",
+          "title": "PR & Media Campaigns image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-pr-media-9.jpg",
+          "title": "PR & Media Campaigns image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-pr-media-10.jpg",
+          "title": "PR & Media Campaigns image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "title": "Brand & Marketing",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245311291",
+          "title": "Taylor video 16",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311289",
+          "title": "Taylor video 17",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310866",
+          "title": "Taylor video 18",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310774",
+          "title": "Taylor video 19",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311003",
+          "title": "Taylor video 20",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-branding-6.jpg",
+          "title": "Brand & Marketing image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-branding-7.jpg",
+          "title": "Brand & Marketing image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-branding-8.jpg",
+          "title": "Brand & Marketing image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-branding-9.jpg",
+          "title": "Brand & Marketing image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-branding-10.jpg",
+          "title": "Brand & Marketing image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "title": "Entertainment & Talent",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245310803",
+          "title": "Taylor video 21",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245311075",
+          "title": "Taylor video 22",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310888",
+          "title": "Taylor video 23",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310756",
+          "title": "Taylor video 24",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-5.jpg",
+          "title": "Entertainment & Talent image 5",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-6.jpg",
+          "title": "Entertainment & Talent image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-7.jpg",
+          "title": "Entertainment & Talent image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-8.jpg",
+          "title": "Entertainment & Talent image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-9.jpg",
+          "title": "Entertainment & Talent image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-entertainment-10.jpg",
+          "title": "Entertainment & Talent image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "title": "Community Initiatives",
+      "items": [
+        {
+          "type": "video",
+          "videoId": "1245310784",
+          "title": "Taylor video 25",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310829",
+          "title": "Taylor video 26",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310826",
+          "title": "Taylor video 27",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "video",
+          "videoId": "1245310760",
+          "title": "Taylor video 28",
+          "description": "Add the confirmed Vimeo title and short description here."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-5.jpg",
+          "title": "Community Initiatives image 5",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-6.jpg",
+          "title": "Community Initiatives image 6",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-7.jpg",
+          "title": "Community Initiatives image 7",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-8.jpg",
+          "title": "Community Initiatives image 8",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-9.jpg",
+          "title": "Community Initiatives image 9",
+          "description": "Replace this placeholder with an approved project photograph."
+        },
+        {
+          "type": "image",
+          "image": "/uploads/gallery-placeholder-community-10.jpg",
+          "title": "Community Initiatives image 10",
+          "description": "Replace this placeholder with an approved project photograph."
+        }
+      ]
+    }
+  ]
+}
