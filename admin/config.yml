@@ -253,15 +253,15 @@ collections:
             fields:
               - { label: "Gallery ID", name: "id", widget: "string" }
               - { label: "Gallery title", name: "title", widget: "string" }
+              - { label: "Gallery introduction", name: "description", widget: "text", required: false }
               - label: "Media items"
                 name: "items"
                 widget: "list"
+                summary: "{{fields.type}} {{fields.videoId}}"
                 fields:
                   - { label: "Type", name: "type", widget: "select", options: ["image", "video"] }
-                  - { label: "Image", name: "image", widget: "image", required: false }
-                  - { label: "Vimeo video ID", name: "videoId", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text", required: false }
+                  - { label: "Image (for photos)", name: "image", widget: "image", required: false }
+                  - { label: "Vimeo video ID (for videos, digits only)", name: "videoId", widget: "string", required: false }
 
   - name: "site_content"
     label: "Website Content"
@@ -276,6 +276,6 @@ collections:
           - { label: "Short event introduction", name: "grammy_subtitle", widget: "text" }
           - { label: "Event description", name: "grammy_description", widget: "text" }
           - { label: "Timing", name: "grammy_timing", widget: "string" }
-          - { label: "Location", name: "grammy_location", widget: "string" }
+          - { label: "Who it is for", name: "grammy_audience", widget: "string" }
           - { label: "Registration status", name: "grammy_registration", widget: "string" }
           - { label: "Inquiry button label", name: "grammy_cta_label", widget: "string" }

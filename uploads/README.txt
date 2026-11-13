@@ -1,1 +1,1 @@
-Bulk-upload Taylor-approved images into this directory (subfolders are supported). Select existing files from Decap media picker. Gallery placeholder paths in data/portfolio-galleries.json should be replaced with real uploaded images before publishing.
+Upload approved images into this directory (subfolders are fine, for example uploads/gallery/ or uploads/about/). After committing, select them in Decap CMS at /admin/, or use the public path in data/site-images.json and data/portfolio-galleries.json, for example /uploads/gallery/photo-01.jpg. Keep uploads out of assets/.

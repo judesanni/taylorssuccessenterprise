@@ -3,396 +3,390 @@
     {
       "id": "event-production",
       "title": "Event Production",
+      "description": "Live experiences shaped through creative direction, production planning, vendor coordination and on-site delivery.",
       "items": [
         {
-          "type": "video",
-          "videoId": "1245311343",
-          "title": "Taylor video 01",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311383",
-          "title": "Taylor video 02",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311207",
-          "title": "Taylor video 03",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311307",
-          "title": "Taylor video 04",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311354",
-          "title": "Taylor video 05",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1400&q=85"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-event-production-6.jpg",
-          "title": "Event Production image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311165"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310845"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311383"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311127"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-event-production-7.jpg",
-          "title": "Event Production image 7",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311371"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-event-production-8.jpg",
-          "title": "Event Production image 8",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311204"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-event-production-9.jpg",
-          "title": "Event Production image 9",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=85"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-event-production-10.jpg",
-          "title": "Event Production image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245311075"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311354"
         }
       ]
     },
     {
       "id": "conference-business",
       "title": "Conference & Business Events",
+      "description": "Professional gatherings designed around thoughtful programming, smooth event flow and meaningful connections.",
       "items": [
         {
-          "type": "video",
-          "videoId": "1245311165",
-          "title": "Taylor video 06",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245310757",
-          "title": "Taylor video 07",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311127",
-          "title": "Taylor video 08",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311388",
-          "title": "Taylor video 09",
-          "description": "Add the confirmed Vimeo title and short description here."
-        },
-        {
-          "type": "video",
-          "videoId": "1245311204",
-          "title": "Taylor video 10",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-conference-business-6.jpg",
-          "title": "Conference & Business Events image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310829"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-conference-business-7.jpg",
-          "title": "Conference & Business Events image 7",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310845"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311204"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-conference-business-8.jpg",
-          "title": "Conference & Business Events image 8",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1400&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310866"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311165"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-conference-business-9.jpg",
-          "title": "Conference & Business Events image 9",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=85"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-conference-business-10.jpg",
-          "title": "Conference & Business Events image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245311388"
         }
       ]
     },
     {
       "id": "pr-media",
       "title": "PR & Media Campaigns",
+      "description": "Publicity, interviews, media moments and campaigns built to give stories a wider reach.",
       "items": [
         {
           "type": "video",
-          "videoId": "1245311160",
-          "title": "Taylor video 11",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311207"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245310845",
-          "title": "Taylor video 12",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311289"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245311371",
-          "title": "Taylor video 13",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311160"
         },
         {
           "type": "video",
-          "videoId": "1245310758",
-          "title": "Taylor video 14",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311343"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245310938",
-          "title": "Taylor video 15",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245310774"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310784"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311307"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310938"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-pr-media-6.jpg",
-          "title": "PR & Media Campaigns image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1559223607-a43c990c692c?auto=format&fit=crop&w=900&q=85"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-pr-media-7.jpg",
-          "title": "PR & Media Campaigns image 7",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-pr-media-8.jpg",
-          "title": "PR & Media Campaigns image 8",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-pr-media-9.jpg",
-          "title": "PR & Media Campaigns image 9",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-pr-media-10.jpg",
-          "title": "PR & Media Campaigns image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245310803"
         }
       ]
     },
     {
       "id": "branding",
       "title": "Brand & Marketing",
+      "description": "Brand storytelling, creative direction and marketing moments that help businesses build recognition.",
       "items": [
         {
-          "type": "video",
-          "videoId": "1245311291",
-          "title": "Taylor video 16",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245311289",
-          "title": "Taylor video 17",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311003"
         },
         {
           "type": "video",
-          "videoId": "1245310866",
-          "title": "Taylor video 18",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245310826"
         },
         {
           "type": "video",
-          "videoId": "1245310774",
-          "title": "Taylor video 19",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311289"
         },
         {
           "type": "video",
-          "videoId": "1245311003",
-          "title": "Taylor video 20",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245310756"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310757"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-branding-6.jpg",
-          "title": "Brand & Marketing image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311291"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-branding-7.jpg",
-          "title": "Brand & Marketing image 7",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-branding-8.jpg",
-          "title": "Brand & Marketing image 8",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310866"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310803"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-branding-9.jpg",
-          "title": "Brand & Marketing image 9",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-branding-10.jpg",
-          "title": "Brand & Marketing image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245310888"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310774"
         }
       ]
     },
     {
       "id": "entertainment",
       "title": "Entertainment & Talent",
+      "description": "Talent relations, entertainment publicity, appearances and the people behind memorable moments.",
       "items": [
         {
-          "type": "video",
-          "videoId": "1245310803",
-          "title": "Taylor video 21",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=88"
         },
         {
           "type": "video",
-          "videoId": "1245311075",
-          "title": "Taylor video 22",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311307"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245310888",
-          "title": "Taylor video 23",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311207"
         },
         {
           "type": "video",
-          "videoId": "1245310756",
-          "title": "Taylor video 24",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311383"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-5.jpg",
-          "title": "Entertainment & Talent image 5",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=85"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-6.jpg",
-          "title": "Entertainment & Talent image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311127"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310784"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310888"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310758"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310760"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-7.jpg",
-          "title": "Entertainment & Talent image 7",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311075"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310938"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-8.jpg",
-          "title": "Entertainment & Talent image 8",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=85"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-9.jpg",
-          "title": "Entertainment & Talent image 9",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245311291"
         },
         {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-entertainment-10.jpg",
-          "title": "Entertainment & Talent image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "type": "video",
+          "videoId": "1245311160"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311371"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311343"
         }
       ]
     },
     {
       "id": "community",
       "title": "Community Initiatives",
+      "description": "Community programming, access initiatives and gatherings that connect people with opportunity.",
       "items": [
         {
           "type": "video",
-          "videoId": "1245310784",
-          "title": "Taylor video 25",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311003"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245310829",
-          "title": "Taylor video 26",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245311354"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"
+        },
+        {
+          "type": "image",
+          "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85"
         },
         {
           "type": "video",
-          "videoId": "1245310826",
-          "title": "Taylor video 27",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245310760"
         },
         {
           "type": "video",
-          "videoId": "1245310760",
-          "title": "Taylor video 28",
-          "description": "Add the confirmed Vimeo title and short description here."
+          "videoId": "1245310758"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-community-5.jpg",
-          "title": "Community Initiatives image 5",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311388"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310829"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310826"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-community-6.jpg",
-          "title": "Community Initiatives image 6",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310757"
         },
         {
           "type": "image",
-          "image": "/uploads/gallery-placeholder-community-7.jpg",
-          "title": "Community Initiatives image 7",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-community-8.jpg",
-          "title": "Community Initiatives image 8",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-community-9.jpg",
-          "title": "Community Initiatives image 9",
-          "description": "Replace this placeholder with an approved project photograph."
-        },
-        {
-          "type": "image",
-          "image": "/uploads/gallery-placeholder-community-10.jpg",
-          "title": "Community Initiatives image 10",
-          "description": "Replace this placeholder with an approved project photograph."
+          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=85"
         }
       ]
     }
