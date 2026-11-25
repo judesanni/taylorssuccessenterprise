@@ -7,19 +7,39 @@
       "items": [
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1400&q=85"
+          "image": "/uploads/taylor/flyer-celebrity-soccer-game.jpg"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
+          "image": "/uploads/taylor/flyer-ultimate-spring-festival.jpg"
         },
         {
           "type": "video",
           "videoId": "1245311165"
         },
         {
+          "type": "image",
+          "image": "/uploads/taylor/past-events-collage-1.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311204"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311354"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-world-cup-experience.jpg"
+        },
+        {
           "type": "video",
           "videoId": "1245310845"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-spring-festival-car-bike-show.jpg"
         },
         {
           "type": "video",
@@ -30,32 +50,24 @@
           "videoId": "1245311127"
         },
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1400&q=85"
-        },
-        {
           "type": "video",
           "videoId": "1245311371"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311204"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=85"
         },
         {
           "type": "video",
           "videoId": "1245311075"
         },
         {
-          "type": "video",
-          "videoId": "1245311354"
+          "type": "image",
+          "image": "/uploads/taylor/camera-crew-activation.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/headshot-mixer-group.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/festival-vendors.jpg"
         }
       ]
     },
@@ -65,36 +77,32 @@
       "description": "Professional gatherings designed around thoughtful programming, smooth event flow and meaningful connections.",
       "items": [
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
-        },
-        {
           "type": "video",
-          "videoId": "1245310829"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=85"
+          "videoId": "1245310866"
         },
         {
           "type": "video",
           "videoId": "1245310845"
         },
         {
-          "type": "video",
-          "videoId": "1245311204"
+          "type": "image",
+          "image": "/uploads/taylor/taylor-red-blazer-1.jpg"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1400&q=85"
+          "image": "/uploads/taylor/the-urbans-step-and-repeat.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-sxsw-2024-special-guest.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/backstage-flowers.jpg"
         },
         {
           "type": "video",
-          "videoId": "1245310866"
+          "videoId": "1245310829"
         },
         {
           "type": "video",
@@ -102,7 +110,15 @@
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=85"
+          "image": "/uploads/taylor/networking-group.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311204"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/past-events-collage-2.jpg"
         },
         {
           "type": "video",
@@ -117,39 +133,47 @@
       "items": [
         {
           "type": "video",
-          "videoId": "1245311207"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311289"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
-        },
-        {
-          "type": "video",
           "videoId": "1245311160"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/camera-crew-activation.jpg"
         },
         {
           "type": "video",
           "videoId": "1245311343"
         },
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=85"
+          "type": "video",
+          "videoId": "1245311289"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310938"
         },
         {
           "type": "video",
           "videoId": "1245310774"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311207"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310803"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-superstar-pr.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/event-duo-purple.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/event-selfie-urbans.jpg"
         },
         {
           "type": "video",
@@ -160,16 +184,12 @@
           "videoId": "1245311307"
         },
         {
-          "type": "video",
-          "videoId": "1245310938"
+          "type": "image",
+          "image": "/uploads/taylor/red-carpet-guests.jpg"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1559223607-a43c990c692c?auto=format&fit=crop&w=900&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245310803"
+          "image": "/uploads/taylor/flyer-top-producers-media.jpg"
         }
       ]
     },
@@ -179,16 +199,8 @@
       "description": "Brand storytelling, creative direction and marketing moments that help businesses build recognition.",
       "items": [
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85"
-        },
-        {
           "type": "video",
-          "videoId": "1245311003"
-        },
-        {
-          "type": "video",
-          "videoId": "1245310826"
+          "videoId": "1245310774"
         },
         {
           "type": "video",
@@ -196,7 +208,7 @@
         },
         {
           "type": "video",
-          "videoId": "1245310756"
+          "videoId": "1245310826"
         },
         {
           "type": "video",
@@ -204,23 +216,43 @@
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+          "image": "/uploads/taylor/taylor-red-blazer-2.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310756"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/taylor-blue-dress-full.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/taylor-portrait-blue.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310888"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-superstar-pr.jpg"
         },
         {
           "type": "video",
           "videoId": "1245311291"
         },
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85"
+          "type": "video",
+          "videoId": "1245310866"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+          "image": "/uploads/taylor/taylor-portrait-plug-chain.jpg"
         },
         {
           "type": "video",
-          "videoId": "1245310866"
+          "videoId": "1245311003"
         },
         {
           "type": "video",
@@ -228,15 +260,7 @@
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245310888"
-        },
-        {
-          "type": "video",
-          "videoId": "1245310774"
+          "image": "/uploads/taylor/taylor-white-lace.jpg"
         }
       ]
     },
@@ -247,43 +271,19 @@
       "items": [
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=88"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311307"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311207"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311383"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=85"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311127"
+          "image": "/uploads/taylor/flyer-sxsw-2024-special-guest.jpg"
         },
         {
           "type": "video",
           "videoId": "1245310784"
         },
         {
-          "type": "video",
-          "videoId": "1245310888"
+          "type": "image",
+          "image": "/uploads/taylor/red-carpet-guests.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/event-duo-purple.jpg"
         },
         {
           "type": "video",
@@ -294,20 +294,36 @@
           "videoId": "1245310760"
         },
         {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85"
-        },
-        {
           "type": "video",
           "videoId": "1245311075"
         },
         {
           "type": "video",
-          "videoId": "1245310938"
+          "videoId": "1245310888"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=85"
+          "image": "/uploads/taylor/event-selfie-urbans.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311343"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311383"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/red-carpet-duo.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311127"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/backstage-flowers.jpg"
         },
         {
           "type": "video",
@@ -315,15 +331,31 @@
         },
         {
           "type": "video",
+          "videoId": "1245310938"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311207"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/taylor-with-guest.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311307"
+        },
+        {
+          "type": "video",
           "videoId": "1245311160"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/headshot-mixer-group.jpg"
         },
         {
           "type": "video",
           "videoId": "1245311371"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311343"
         }
       ]
     },
@@ -334,43 +366,19 @@
       "items": [
         {
           "type": "video",
-          "videoId": "1245311003"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245311354"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"
-        },
-        {
-          "type": "image",
-          "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85"
-        },
-        {
-          "type": "video",
-          "videoId": "1245310760"
-        },
-        {
-          "type": "video",
           "videoId": "1245310758"
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85"
+          "image": "/uploads/taylor/networking-group.jpg"
         },
         {
-          "type": "video",
-          "videoId": "1245311388"
+          "type": "image",
+          "image": "/uploads/taylor/flyer-when-queens-collaborate.jpg"
         },
         {
-          "type": "video",
-          "videoId": "1245310829"
+          "type": "image",
+          "image": "/uploads/taylor/festival-vendors.jpg"
         },
         {
           "type": "video",
@@ -378,7 +386,31 @@
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85"
+          "image": "/uploads/taylor/flyer-world-cup-experience.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310829"
+        },
+        {
+          "type": "video",
+          "videoId": "1245310760"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311354"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/flyer-celebrity-soccer-game.jpg"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/taylor/past-events-collage-2.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311388"
         },
         {
           "type": "video",
@@ -386,7 +418,11 @@
         },
         {
           "type": "image",
-          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=85"
+          "image": "/uploads/taylor/flyer-ultimate-spring-festival.jpg"
+        },
+        {
+          "type": "video",
+          "videoId": "1245311003"
         }
       ]
     }

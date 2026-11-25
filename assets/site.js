@@ -1,167 +1,185 @@
+/* Taylor Success Enterprise - site behaviour (vanilla JS, no dependencies) */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const TSE = {
-  eventbrite: "https://www.eventbrite.com/o/taylors-enterprise-28628068455",
-  contactEmail: "tsenterprisesatlanta@gmail.com",
-  services: {
-    "pr-media": {title:"Public Relations & Media Strategy", icon:"✳", intro:"Shape the story people hear about your brand, then put that story in front of the right audiences.", body:"From press releases and media pitching to narrative development, editorial outreach and publicity planning, Taylor Success Enterprise helps clients build visibility with intention. Every campaign begins with the story, the audience and the outcome you want to create. Services can include media strategy, press materials, blog and editorial outreach, interview coordination and publicity support for film, television, music, entrepreneurs and organizations.", images:[{key:"services_pr_media_gallery_1",fallback:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"},{key:"services_pr_media_gallery_2",fallback:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"},{key:"services_pr_media_gallery_3",fallback:"https://images.unsplash.com/photo-1559223607-a43c990c692c?auto=format&fit=crop&w=900&q=85"}]},
-    "events": {title:"Event Production & Management", icon:"◉", intro:"Big energy on the floor. Calm, considered execution behind the scenes.", body:"From intimate dinners and red-carpet moments to conferences, brand activations and large-scale celebrations, Taylor Success Enterprise helps bring events from idea to experience. Support can include concept development, planning, vendor coordination, timelines, talent liaison, on-site production, guest experience and post-event storytelling. Each event is shaped around its audience, objectives and atmosphere.", images:[{key:"services_event_production_gallery_1",fallback:"https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"},{key:"services_event_production_gallery_2",fallback:"https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"},{key:"services_event_production_gallery_3",fallback:"https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85"}]},
-    "branding": {title:"Branding & Marketing Campaigns", icon:"✦", intro:"A clear identity. A sharper message. A campaign that gives people a reason to care.", body:"Taylor Success Enterprise connects brand positioning, campaign planning and audience engagement to help organizations communicate consistently. Engagements may include campaign concepts, creative direction, brand messaging, social media growth strategy, promotional partnerships, street-team activations, billboard planning and marketing support tailored to a client's audience and goals.", images:[{key:"services_brand_marketing_gallery_1",fallback:"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85"},{key:"services_brand_marketing_gallery_2",fallback:"https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=85"},{key:"services_brand_marketing_gallery_3",fallback:"https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85"}]},
-    "partnerships": {title:"Sponsorships & Partnerships", icon:"↗︎", intro:"Connect the right people, brands and opportunities around a shared win.", body:"Partnership strategy is about more than putting logos together. We help clients shape sponsorship opportunities, identify potential brand alignment, prepare outreach materials and coordinate conversations that can create value for both sides. Final partnerships depend on fit, availability and agreement between the parties.", images:[{key:"services_partnerships_gallery_1",fallback:"https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"},{key:"services_partnerships_gallery_2",fallback:"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=85"},{key:"services_partnerships_gallery_3",fallback:"https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=900&q=85"}]},
-    "talent": {title:"Talent & Entertainment Relations", icon:"✺", intro:"Thoughtful coordination for artists, public figures, productions and live experiences.", body:"From talent liaison and promotional appearances to electronic press kits, red-carpet coordination and entertainment publicity, the work is designed to help projects show up professionally and connect with relevant audiences. Specific deliverables are scoped to each production, talent team or campaign.", images:[{key:"services_talent_entertainment_gallery_1",fallback:"https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85"},{key:"services_talent_entertainment_gallery_2",fallback:"https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85"},{key:"services_talent_entertainment_gallery_3",fallback:"https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=85"}]},
-    "business": {title:"Business Development & Consulting", icon:"⌁", intro:"Turn a good idea into a clearer plan, stronger relationships and next steps you can act on.", body:"For entrepreneurs, small businesses and organizations, Taylor Success Enterprise can support growth planning, opportunity identification, business introductions, campaign direction and partnership development. Real estate or investment introductions, where appropriate, are exploratory and subject to due diligence and independent professional advice.", images:[{key:"services_business_consulting_gallery_1",fallback:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"},{key:"services_business_consulting_gallery_2",fallback:"https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=85"},{key:"services_business_consulting_gallery_3",fallback:"https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85"}]}
+/* ---------- navigation: parent / child menu + mobile menu ---------- */
+function initNav(){
+  const toggle=$('.menu-toggle'),menu=$('#menu');
+  const setMenu=open=>{
+    if(!toggle||!menu)return;
+    menu.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    document.body.classList.toggle('modal-open',open);
+  };
+  if(toggle&&menu){
+    toggle.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+    $$('a',menu).forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+    matchMedia('(min-width:1040px)').addEventListener('change',e=>{if(e.matches)setMenu(false);});
   }
-};
-
-const $ = (s,root=document)=>root.querySelector(s);
-const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
-
-function initNavigation(){
-  const toggle=$(".menu-toggle"), mobile=$(".mobile-nav");
-  if(toggle && mobile){
-    toggle.addEventListener("click",()=>{
-      const opened=mobile.classList.toggle("open");
-      toggle.setAttribute("aria-expanded",String(opened));
-      toggle.innerHTML=opened?'<span aria-hidden="true">×</span>':'<span aria-hidden="true">☰</span>';
+  const subs=$$('.has-sub');
+  const shut=s=>{s.classList.remove('open');s.querySelector('.nav-btn').setAttribute('aria-expanded','false');};
+  const open=s=>{subs.forEach(o=>{if(o!==s)shut(o);});s.classList.add('open');s.querySelector('.nav-btn').setAttribute('aria-expanded','true');};
+  subs.forEach(s=>{
+    const btn=s.querySelector('.nav-btn');
+    btn.addEventListener('click',e=>{
+      /* mouse users already opened it by hovering: a click keeps it open; keyboard and touch toggle */
+      if(FINE&&e.detail>0){open(s);return;}
+      s.classList.contains('open')?shut(s):open(s);
     });
-    $$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>{mobile.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.innerHTML='<span aria-hidden="true">☰</span>';}));
-  }
-
-  // Get clean current path (e.g., "/about" instead of "/about.html")
-  const currentPath = location.pathname.replace(/\.html$/, '').toLowerCase();
-
-  $$("[data-nav]").forEach(a => {
-    // Get the absolute link path relative to the domain root
-    const linkPath = a.pathname.replace(/\.html$/, '').toLowerCase();
-    
-    // Check if it's the home page or a matching subpage
-    const isCurrent = (currentPath === '/' || currentPath === '/index') 
-      ? (linkPath === '/' || linkPath === '/index')
-      : (linkPath === currentPath);
-
-    a.classList.toggle("active", isCurrent);
-    if(isCurrent) a.setAttribute("aria-current", "page");
-    else a.removeAttribute("aria-current");
+    if(FINE){
+      let t;
+      s.addEventListener('mouseenter',()=>{clearTimeout(t);open(s);});
+      s.addEventListener('mouseleave',()=>{t=setTimeout(()=>shut(s),180);});
+    }
+    s.addEventListener('focusout',e=>{if(!s.contains(e.relatedTarget))shut(s);});
+  });
+  document.addEventListener('click',e=>{if(!e.target.closest('.has-sub'))subs.forEach(shut);});
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const openSub=subs.find(s=>s.classList.contains('open'));
+    if(openSub){shut(openSub);openSub.querySelector('.nav-btn').focus();}
+    else if(menu&&menu.classList.contains('open')){setMenu(false);toggle.focus();}
   });
 }
-function initReveal(){
-  const els=$$(".reveal");
-  if(!("IntersectionObserver" in window)){els.forEach(e=>e.classList.add("is-visible"));return;}
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");io.unobserve(e.target)}}),{threshold:.12});
-  els.forEach(e=>io.observe(e));
+
+/* ---------- cursor: soft ring that turns into a label ---------- */
+function initCursor(){
+  if(!FINE||REDUCE)return;
+  const c=document.createElement('div');
+  c.className='cursor';c.setAttribute('aria-hidden','true');c.innerHTML='<span class="t"></span>';
+  document.body.appendChild(c);
+  const label=$('.t',c);
+  let x=-200,y=-200,cx=x,cy=y,raf=0;
+  const loop=()=>{
+    cx+=(x-cx)*.24;cy+=(y-cy)*.24;
+    c.style.transform=`translate3d(${cx}px,${cy}px,0)`;
+    raf=(Math.abs(x-cx)>.15||Math.abs(y-cy)>.15)?requestAnimationFrame(loop):0;
+  };
+  addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;c.classList.add('on');if(!raf)raf=requestAnimationFrame(loop);},{passive:true});
+  document.documentElement.addEventListener('mouseleave',()=>c.classList.remove('on'));
+  document.addEventListener('pointerover',e=>{
+    const el=e.target.closest&&e.target.closest('[data-cursor]');
+    if(el){label.textContent=el.dataset.cursor;c.classList.add('big');}else c.classList.remove('big');
+  });
 }
+
+/* ---------- hero: paparazzi flash trail made of Taylor's own photos ---------- */
+function initTrail(){
+  const hero=$('[data-trail]');
+  if(!hero||!FINE||REDUCE)return;
+  const pool=shuffle((hero.dataset.trail||'').split(',').map(s=>s.trim()).filter(Boolean));
+  if(!pool.length)return;
+  const layer=document.createElement('div');
+  layer.className='trail';layer.setAttribute('aria-hidden','true');
+  hero.prepend(layer);
+  (window.requestIdleCallback||(fn=>setTimeout(fn,700)))(()=>pool.forEach(src=>{const i=new Image();i.src=src;}));
+  let last=null,idx=0,live=0;
+  hero.addEventListener('pointermove',e=>{
+    const r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+    if(last&&Math.hypot(x-last.x,y-last.y)<130)return;
+    last={x,y};
+    if(live>=9)return;
+    live++;
+    const el=document.createElement('div');
+    el.className='snap';
+    el.style.left=x+'px';el.style.top=y+'px';
+    el.style.setProperty('--r',(Math.random()*18-9).toFixed(1)+'deg');
+    const img=new Image();img.alt='';img.src=pool[idx++%pool.length];
+    el.appendChild(img);layer.appendChild(el);
+    setTimeout(()=>{el.remove();live--;},1300);
+  },{passive:true});
+}
+
+/* ---------- services: photo follows the pointer over a row ---------- */
+function initPeek(){
+  const rows=$$('[data-peek]');
+  if(!rows.length||!FINE)return;
+  const peek=document.createElement('div');
+  peek.className='peek';peek.setAttribute('aria-hidden','true');peek.innerHTML='<img alt="">';
+  document.body.appendChild(peek);
+  const img=peek.firstElementChild;
+  rows.forEach(r=>{
+    const src=r.dataset.peek;
+    const pre=new Image();
+    r.addEventListener('mouseenter',()=>{if(!pre.src)pre.src=src;img.src=src;peek.classList.add('on');});
+    r.addEventListener('mouseleave',()=>peek.classList.remove('on'));
+    r.addEventListener('mousemove',e=>{
+      const px=Math.min(e.clientX+34,innerWidth-270),py=Math.max(12,Math.min(e.clientY-160,innerHeight-330));
+      peek.style.transform=`translate(${px}px,${py}px)`;
+    },{passive:true});
+  });
+}
+
+/* ---------- numbers count up once ---------- */
 function initCounters(){
-  $$("[data-count]").forEach(el=>{
-    const target=Number(el.dataset.count); let done=false;
-    const start=()=>{if(done)return;done=true;const startTime=performance.now(),duration=1200;function tick(now){const p=Math.min((now-startTime)/duration,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+"+";if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)};
-    if(!("IntersectionObserver" in window)){start();return;}
-    const io=new IntersectionObserver(entries=>{if(entries[0].isIntersecting){start();io.disconnect()}},{threshold:.4});io.observe(el);
-  });
-}
-
-let CMS_IMAGES = {};
-function getNested(obj,path){return path.split('.').reduce((value,key)=>value && value[key]!==undefined?value[key]:undefined,obj)}
-function resolveImage(key,fallback=''){const value=getNested(CMS_IMAGES,key);return (typeof value==='string' && value.trim())?value:fallback}
-function escapeAttr(value){return String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
-async function initCmsImages(){
-  try{const response=await fetch('data/site-images.json',{cache:'no-store'});if(!response.ok)return;CMS_IMAGES=await response.json();
-    $$('[data-cms-image]').forEach(img=>{const path=img.dataset.cmsImage;const value=resolveImage(path);if(value)img.src=value;});
-    $$('[data-cms-bg-image]').forEach(el=>{const value=resolveImage(el.dataset.cmsBgImage);if(value)el.style.setProperty('--cta-image',`url("${value.replace(/"/g,'\\"')}")`);});
-  }catch(error){/* Keep the bundled default images if the CMS file is unavailable. */}
-}
-
-function openService(key){
-  const data=TSE.services[key]; if(!data)return;
-  const backdrop=$("#service-modal"); if(!backdrop)return;
-  backdrop.querySelector(".modal-title").textContent=data.title;
-  backdrop.querySelector(".modal-intro").textContent=data.intro;
-  backdrop.querySelector(".modal-copy").textContent=data.body;
-  const gallery=backdrop.querySelector(".modal-gallery");
-  gallery.innerHTML=data.images.map((item,i)=>{const src=resolveImage(item.key,item.fallback);return `<img src="${escapeAttr(src)}" alt="${data.title} image ${i+1}" loading="lazy">`}).join("")+
-  `<div class="gallery-controls"><span class="muted">A closer look at the work.</span><button type="button" data-modal-inquire>Discuss this service ↗︎</button></div>`;
-  backdrop.classList.add("open");document.body.classList.add("modal-open");
-  backdrop.setAttribute("aria-hidden","false");history.replaceState(null,"",`#service=${encodeURIComponent(key)}`);
-  backdrop.querySelector("[data-modal-inquire]").addEventListener("click",()=>location.href=`contact.html?service=${encodeURIComponent(data.title)}`);
-  backdrop.querySelector(".modal-close").focus();
-}
-function closeService(){
-  const backdrop=$("#service-modal");if(!backdrop)return;
-  backdrop.classList.remove("open");document.body.classList.remove("modal-open");backdrop.setAttribute("aria-hidden","true");
-  if(location.hash.startsWith("#service="))history.replaceState(null,"",location.pathname+location.search);
-}
-function initServiceModals(){
-  $$("[data-service]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault();openService(el.dataset.service)}));
-  const backdrop=$("#service-modal");
-  if(backdrop){backdrop.addEventListener("click",e=>{if(e.target===backdrop)closeService()});backdrop.querySelector(".modal-close").addEventListener("click",closeService)}
-  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeService()});
-  const params=new URLSearchParams(location.search);const requested=params.get("service")|| (location.hash.startsWith("#service=")?decodeURIComponent(location.hash.slice(9)):"");
-  if(requested){const key=TSE.services[requested]?requested:Object.keys(TSE.services).find(k=>TSE.services[k].title.toLowerCase()===requested.toLowerCase());if(key)setTimeout(()=>openService(key),120)}
-}
-function initFilters(){
-  $$("[data-filter-group]").forEach(group=>{
-    const buttons=$$(".filter-btn",group),cards=$$("[data-category]",group.parentElement);
-    const apply=btn=>{
-      buttons.forEach(b=>b.classList.toggle("active",b===btn));
-      const val=btn.dataset.filter;
-      cards.forEach(card=>card.classList.toggle("hidden",val!=="all"&&!card.dataset.category.split(" ").includes(val)));
+  $$('[data-count]').forEach(el=>{
+    const target=Number(el.dataset.count),suffix=el.dataset.suffix||'';
+    if(REDUCE||!('IntersectionObserver' in window)){el.textContent=target+suffix;return;}
+    let done=false;
+    const run=()=>{
+      if(done)return;done=true;
+      const t0=performance.now(),dur=1100;
+      const tick=now=>{const p=Math.min((now-t0)/dur,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+suffix;if(p<1)requestAnimationFrame(tick);};
+      requestAnimationFrame(tick);
     };
-    buttons.forEach(btn=>btn.addEventListener("click",()=>apply(btn)));
-    const wanted=new URLSearchParams(location.search).get("category");
-    const match=wanted&&buttons.find(b=>b.dataset.filter===wanted);
-    if(match)apply(match);
+    const io=new IntersectionObserver(en=>{if(en[0].isIntersecting){run();io.disconnect();}},{threshold:.5});
+    io.observe(el);
   });
 }
 
-
+/* ---------- Decap CMS hooks: image slots and editable text ---------- */
+let CMS_IMAGES={};
+async function initCmsImages(){
+  try{
+    const r=await fetch('data/site-images.json',{cache:'no-store'});
+    if(!r.ok)return;
+    CMS_IMAGES=await r.json();
+    $$('[data-cms-image]').forEach(img=>{const v=CMS_IMAGES[img.dataset.cmsImage];if(typeof v==='string'&&v.trim())img.src=v;});
+  }catch(e){/* the bundled photos stay in place */}
+}
 async function initCmsContent(){
   try{
-    const response=await fetch('data/event-content.json',{cache:'no-store'});
-    if(!response.ok)return;
-    const content=await response.json();
-    $$('[data-cms-text]').forEach(el=>{
-      const key=el.dataset.cmsText;
-      if(typeof content[key]==='string' && content[key].trim())el.textContent=content[key];
-    });
-  }catch(error){/* Keep the built-in event copy if CMS content is unavailable. */}
+    const r=await fetch('data/event-content.json',{cache:'no-store'});
+    if(!r.ok)return;
+    const content=await r.json();
+    $$('[data-cms-text]').forEach(el=>{const v=content[el.dataset.cmsText];if(typeof v==='string'&&v.trim())el.textContent=v;});
+  }catch(e){/* the built-in copy stays in place */}
 }
 
-function initBrandCarousel(){
-  const track=$(".brand-marquee-track"), viewport=$(".brand-marquee"), toggle=$(".brand-motion-toggle");
-  if(!track||!viewport)return;
-  // Duplicate the logo sequence once so the animation loops continuously.
-  if(!track.dataset.cloned){
-    const originals=[...track.children];
-    originals.forEach(item=>{
-      const copy=item.cloneNode(true);
-      copy.setAttribute("aria-hidden","true");
-      copy.querySelectorAll("img").forEach(img=>img.alt="");
-      track.appendChild(copy);
-    });
-    track.dataset.cloned="true";
-  }
-  $$(".brand-logo-item img",track).forEach(img=>{
-    img.addEventListener("error",()=>img.parentElement.classList.add("logo-fallback-active"),{once:true});
-    if(img.complete && img.naturalWidth===0)img.parentElement.classList.add("logo-fallback-active");
-  });
-  if(toggle){
-    toggle.addEventListener("click",()=>{
-      const paused=viewport.classList.toggle("is-paused");
-      toggle.setAttribute("aria-pressed",String(paused));
-      toggle.textContent=paused?"Resume logos":"Pause logos";
-    });
-  }
-}
-
+/* ---------- contact form: preselect the service from ?service= ---------- */
 function initContactForm(){
   $$('[data-contact-form]').forEach(form=>{
-    const params=new URLSearchParams(location.search),service=params.get('service');
-    if(service && form.elements.service){
-      const select=form.elements.service;
-      const option=[...select.options].find(o=>o.text.toLowerCase()===service.toLowerCase()||o.value.toLowerCase()===service.toLowerCase());
-      if(option)select.value=option.value;
+    const service=new URLSearchParams(location.search).get('service');
+    if(service&&form.elements.service){
+      const sel=form.elements.service;
+      const opt=[...sel.options].find(o=>o.text.toLowerCase()===service.toLowerCase()||o.value.toLowerCase()===service.toLowerCase());
+      if(opt)sel.value=opt.value;
     }
+    /* Netlify Forms handles the submit unless an external endpoint is configured (Formspree, Web3Forms, etc.) */
+    const endpoint=(form.dataset.endpoint||'').trim();
+    if(!endpoint)return;
+    const status=$('.form-status',form),btn=$('[type=submit]',form);
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      if(!form.checkValidity()){form.reportValidity();return;}
+      const label=btn.innerHTML;btn.disabled=true;btn.textContent='Sending...';if(status)status.textContent='';
+      try{
+        const fd=new FormData(form);
+        const key=(form.dataset.accessKey||'').trim();
+        if(key)fd.append('access_key',key);
+        const r=await fetch(endpoint,{method:'POST',body:fd,headers:{Accept:'application/json'}});
+        if(!r.ok)throw new Error('send failed');
+        location.href='thank-you.html';
+      }catch(err){
+        if(status)status.textContent='That did not send. Please call or email directly using the details on this page.';
+        btn.disabled=false;btn.innerHTML=label;
+      }
+    });
   });
 }
-
 
 /* ------------------------------------------------------------------
    Gallery: square cover thumbnails, one lightbox for photos and videos
@@ -173,7 +191,8 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 /* Thumbnail URL: smaller copy for grids, original for the viewer. */
 function thumbUrl(url){
   try{
-    if(/^https?:\/\/images\.unsplash\.com\//.test(url)){const u=new URL(url);u.searchParams.set('w','800');u.searchParams.set('q','80');return u.toString();}
+    const m=url.match(/^\/uploads\/taylor\/([^\/]+\.jpg)$/i);
+    if(m)return '/uploads/taylor/t/'+m[1];
     if(url.startsWith('/uploads/'))return '/.netlify/images?url='+encodeURIComponent(url)+'&w=800';
   }catch(e){}
   return url;
@@ -222,9 +241,9 @@ function hydratePosters(root){
 
 function renderTile(item,index){
   if(item.type==='video'){
-    return `<button class="media-tile is-video" type="button" data-index="${index}" data-video="${escapeText(item.videoId)}" aria-label="Play video"><span class="media-poster"></span><span class="media-play" aria-hidden="true"></span></button>`;
+    return `<button class="media-tile is-video" data-cursor="Play" type="button" data-index="${index}" data-video="${escapeText(item.videoId)}" aria-label="Play video"><span class="media-poster"></span><span class="media-play" aria-hidden="true"></span></button>`;
   }
-  return `<button class="media-tile is-image" type="button" data-index="${index}" aria-label="View photo"><img src="${escapeText(thumbUrl(item.image))}" data-original="${escapeText(item.image)}" alt="" loading="lazy" decoding="async" onerror="if(this.dataset.original&&this.src!==this.dataset.original){this.src=this.dataset.original;}"></button>`;
+  return `<button class="media-tile is-image" data-cursor="View" type="button" data-index="${index}" aria-label="View photo"><img src="${escapeText(thumbUrl(item.image))}" data-original="${escapeText(item.image)}" alt="" loading="lazy" decoding="async" onerror="if(this.dataset.original&&this.src!==this.dataset.original){this.src=this.dataset.original;}"></button>`;
 }
 function renderGrid(container,list){
   container.__list=list;
@@ -433,4 +452,7 @@ async function initPortfolioGalleries(){
   });
 }
 
-document.addEventListener("DOMContentLoaded",()=>{initNavigation();initReveal();initCounters();initServiceModals();initFilters();initContactForm();initCmsImages();initCmsContent();initBrandCarousel();initPortfolioGalleries()});
+document.addEventListener("DOMContentLoaded",()=>{
+  initNav();initCursor();initTrail();initPeek();initCounters();initContactForm();
+  initCmsImages();initCmsContent();initPortfolioGalleries();
+});

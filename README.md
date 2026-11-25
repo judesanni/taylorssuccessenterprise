@@ -1,68 +1,67 @@
-# Taylor Success Enterprise Website
+# Taylor Success Enterprise: website (redesign v4)
 
-Static HTML/CSS/JS website. Netlify publishes the repository root. The production domain is `https://taylorssuccessenterprise.com`.
+Static site: plain HTML, CSS and JavaScript. No build step, no framework, no monthly software fees. Content lives in GitHub, images and the gallery are edited in Decap CMS at `/admin/`.
 
-## 1. Upload the website to GitHub
+## 1. Hosting: fix the Netlify "tokens used up" problem
 
-1. Download and extract this ZIP.
-2. Open the existing repository: `judesanni/taylorssuccessenterprise`.
-3. Upload the contents of the extracted folder to the repository root on the `main` branch. Do not upload the enclosing folder as a nested directory.
-4. Check that `index.html`, `work.html`, `gallery.html`, `assets/`, `data/`, and `uploads/` are visible at the repository root.
-5. Commit once. Netlify will start the production deploy because `main` is connected. Do not repeatedly redeploy for individual image changes.
+**What is happening.** Netlify moved to credit-based plans. The Free plan includes 300 credits a month. As of this build, a production deploy costs 15 credits (about 20 deploys a month) and bandwidth costs 20 credits per GB (about 15 GB a month). Two things drain that quickly: every CMS save and every upload to GitHub triggers a deploy, and photo-heavy pages use bandwidth. When the credits run out, the site is paused until the next cycle. Check Netlify's pricing page for the current numbers before deciding.
 
-For review before production, use a GitHub branch or pull request and its Netlify Deploy Preview. Merge to `main` only after checking the preview.
+**Recommended: move the site to Cloudflare Pages (free).** The free plan has unlimited bandwidth and requests for static files, 500 builds a month and free HTTPS with custom domains. Nothing else about the setup changes: GitHub stays the source of truth, the GoDaddy domain stays, Decap CMS keeps working (its login does not depend on Netlify).
 
-## 2. Add or replace images in bulk
+1. Cloudflare dashboard > Workers & Pages > Create > Pages > Connect to Git > choose the repository.
+2. Build settings: framework preset **None**, build command empty, build output directory `/` (or `.`). Deploy.
+3. Custom domains > add `taylorssuccessenterprise.com` and `www`. Follow Cloudflare's DNS instructions at GoDaddy (changing the nameservers to Cloudflare is the simplest route). Set the root domain as primary and redirect `www` to it.
+4. **Contact form.** Netlify Forms only works on Netlify, so on Cloudflare the form needs a free form service. Easiest: create a free Web3Forms (or Formspree) form that emails `tsenterprisesatlanta@gmail.com`, then in `contact.html` set on the `<form>` tag:
+   - `data-endpoint="https://api.web3forms.com/submit"` and `data-access-key="YOUR_KEY"` (Web3Forms), or
+   - `data-endpoint="https://formspree.io/f/YOUR_ID"` (Formspree, leave `data-access-key` empty).
+   The site already handles the submit, the redirect to the thank-you page and a friendly error message. Leave both attributes empty to keep using Netlify Forms.
+5. Turn off the old Netlify site once the new one works.
 
-1. Collect the approved images and rename them clearly, for example `event-rooftop-01.jpg` or `about-taylor-portrait.jpg`.
-2. In the repository, open `uploads/` (subfolders such as `uploads/gallery/` or `uploads/about/` are fine). Upload a batch together, then commit once.
-3. In Decap CMS at `/admin/`, open **Website Images** to swap a named placement (homepage, About, Events, Resource Center, Work and Services images), or **Portfolio Galleries** to change gallery photos. Choose the already-uploaded file from the media library.
-4. If editing JSON directly, use the public path, for example `/uploads/gallery/event-rooftop-01.jpg`, never a local file path.
+**If you stay on Netlify instead:** publish in batches (collect several edits, then deploy once), turn off deploy previews and branch deploys you do not need, use "Stop auto publishing" and publish manually, and keep photos small (see section 3). The site is built to be light: gallery tiles use small copies of each photo, videos only load on click, and fonts are self-hosted. Even so, 20 deploys a month is the ceiling on the Free plan.
 
-Recommended sizes: wide hero images about 2000 × 1200 px; portraits about 1200 × 1500 px; gallery photos 1600 px on the long edge. Gallery thumbnails are square and cropped to fill, so keep faces and key subjects near the centre. Clicking a photo opens it uncropped at its original proportions (large images scroll).
+`_headers` (caching and security headers) works on both Netlify and Cloudflare Pages.
 
-## 3. Add or replace Vimeo videos
+## 2. What is on the site
 
-1. Upload the video to Taylor's Vimeo account and allow embedding on `taylorssuccessenterprise.com` in the video's privacy settings.
-2. Copy the numeric ID from the video URL (digits only).
-3. In Decap CMS, open **Portfolio Galleries**, pick a gallery (a video can be added to more than one), add a media item with type `video` and paste the ID.
-4. Thumbnails are fetched automatically from Vimeo. The video only loads when a visitor clicks it, so the page stays fast.
+| Page | File | Purpose |
+|---|---|---|
+| Home | `index.html` | Hero with the faded Resource Center photo and logo carousel, Resource Center funding feature, Meet Taylor, services, press pass, photo collage, FAQ |
+| Resource Center | `resource-center.html` | The funding case: opportunity, five service areas, the $150,000 ask, growth targets, three ways to get involved, founder, FAQ |
+| About | `about.html` | Story, Business. People. Impact., what Taylor is building next, at-a-glance facts, FAQ |
+| Services | `services.html` | Six services with anchors, FAQ |
+| Work / Gallery | `work.html`, `gallery.html` | Category tiles that open galleries; the full filterable gallery (28 Vimeo videos and 27 photos) |
+| Events | `events.html` | Grammy season gathering and past event posters |
+| Contact | `contact.html` | Inquiry form (includes Resource Center funding and early-interest options) |
+| Legal | `privacy.html`, `terms.html`, `cookies.html` | Policies |
 
-`data/videos.json` is a reference list of the 28 launch videos with their categories. The site itself reads `data/portfolio-galleries.json`.
+**Navigation:** About, Services, Work (dropdown: Highlights, Full gallery, with the current page marked), Events, Resource Center, plus a "Work with Taylor" button.
 
-## 4. How the gallery and Our Work behave
+**Look and feel:** warm cream and near-black with cobalt night gradients, champagne gold and a rose-pink accent. Bricolage Grotesque and Instrument Serif, self-hosted. Motion: a slow drift on the hero photo, a logo carousel that fades at the edges, marquees, a spotlight cursor ring with labels, a paparazzi-flash photo trail in the hero (desktop only) and a photo that follows the pointer over service rows. All motion switches off for visitors who prefer reduced motion, and cursor effects do not run on touch devices.
 
-- Gallery and Our Work show photos and videos together in a random order that changes on every visit. There are no titles or captions.
-- The Gallery page filters by category and by photos or videos. Videos that sit in several categories appear once under All work.
-- Every tile opens a larger viewer with previous and next arrows (also arrow keys and swipe on phones), Escape to close, and scrolling for tall images.
-- The Vimeo player is configured without title, author and portrait. Vimeo's own logo, like, share and watch-later buttons are controlled by each video's Embed settings in Vimeo (a paid-plan feature), not by the website.
+**Logos ("As featured on").** NBC, Tubi, CBS and iHeartRadio are bundled in `assets/logos/` (from the open Simple Icons set). BET and MTV load from Wikimedia Commons, which always serves the current version of each logo. Any logo that fails to load is skipped automatically. To change the lineup, edit the `LOGOS` list in the page or drop SVG files into `assets/logos/` and add an `<img>` to the strip in `index.html`. Logos are shown in white and belong to their owners.
 
-## 5. Connect the GoDaddy domain to Netlify
+## 3. Editing content
 
-The domain can stay registered at GoDaddy. You do not need to buy GoDaddy hosting.
+**Photos.** Upload to `uploads/` in GitHub (or the CMS media library), then open `/admin/` > Website Images and choose the new file for any placement (each is labelled, for example "Home: faded hero background"). Gallery photos and videos are under Portfolio Galleries. Keep each photo under about 400 KB: every extra megabyte on the page costs bandwidth. Gallery tiles use the small copies in `uploads/taylor/t/`; photos uploaded through the CMS are resized automatically on Netlify and shown at full size elsewhere.
 
-1. In Netlify, open the Taylor Success Enterprise site, then **Domain management**.
-2. Choose **Add a domain** / **Add custom domain** and enter `taylorssuccessenterprise.com`.
-3. Netlify will show the DNS records it expects. Keep that screen open. Do not copy DNS values from an old guide because Netlify's displayed values are authoritative for this site.
-4. In GoDaddy, open **My Products → Domains → taylorssuccessenterprise.com → DNS / Manage DNS**.
-5. Add or update only the records Netlify specifies for the root domain (`@`) and `www`. Netlify commonly uses apex A/ALIAS records and a `www` CNAME, but use the exact values shown in the current Netlify dashboard.
-6. Do not delete MX records or unrelated TXT records. They may control email, domain verification or other services.
-7. Return to Netlify and wait for DNS verification and the SSL certificate. Set the preferred primary domain (usually the root domain) and confirm the other hostname redirects to it.
-8. Test both `https://taylorssuccessenterprise.com` and `https://www.taylorssuccessenterprise.com`, plus `/admin/`, after SSL is active.
+**Videos.** Upload to Vimeo, allow embedding for `taylorssuccessenterprise.com`, copy the numeric ID and add a `video` item to one or more galleries. Thumbnails load automatically. Vimeo's own logo and buttons are controlled in each video's Embed settings on Vimeo (paid plans).
 
-DNS changes can take time to propagate. Domain renewal by itself does not connect the domain to Netlify.
+**Grammy section text.** `/admin/` > Website Content > Grammy season event.
 
-## 6. Decap CMS and forms
+**Everything else** (copy, services, FAQs) is in the HTML files.
 
-- CMS address: `https://taylorssuccessenterprise.com/admin/`
-- Decap Turbo site ID is set in `admin/config.yml`.
-- Ensure the custom-domain admin URL is allowlisted in Decap Turbo and the account has membership to the site. An allowed URL alone does not grant account access.
-- In Netlify, enable form detection and configure notifications for `tsenterprisesatlanta@gmail.com`. Submit a real test form after launch. Form delivery is not verified by the ZIP.
+## 4. SEO, AEO and GEO built in
 
-## 7. SEO and launch checks
+- Unique title, description, canonical URL and share image on every page.
+- JSON-LD: ProfessionalService/Organization, Person (Taylor Frucel, also Taylor Stubbs Frucel), WebSite, Services, FAQPage on home, about, services and the Resource Center page, breadcrumbs.
+- Answer-first FAQs written as questions with short factual answers, different on each page.
+- Consistent entity facts and `sameAs` links to Instagram, Facebook, LinkedIn, YouTube and Eventbrite; `llms.txt`, `robots.txt` and `sitemap.xml`.
+- One H1 per page, descriptive alt text, skip link, keyboard-friendly menus, visible focus states.
 
-Canonical URLs and the sitemap use the custom domain. After DNS and SSL are active, submit `/sitemap.xml` to Google Search Console and Bing Webmaster Tools. No search ranking is guaranteed.
+**After launch:** add the site to Google Search Console and Bing Webmaster Tools and submit `https://taylorssuccessenterprise.com/sitemap.xml`; claim a Google Business Profile with the same name, phone and email; link the site from every social profile; link the Resource Center page from any funding application, press mention or partner page, since that page is written to stand on its own.
 
-## Verification limits
+## 5. Confirmed and still worth a quick check
 
-The archive can be checked locally for HTML references, JSON, YAML, JavaScript syntax, XML and ZIP integrity. Those checks cannot prove live DNS, SSL, CMS login, Vimeo embed permissions, form delivery, external image availability or final visual rendering in every browser.
+Confirmed by Taylor: 5-time award-winning publicist, 280+ blogs and media outlets, phone number (443) 347-3239.
+
+Please double-check before launch: the "Press pass" list on the home page (taken from the media kit), that the Resource Center image is acceptable as an illustration of the intended space, and the Grammy season details once they are public.
